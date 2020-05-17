@@ -15,8 +15,9 @@ li{
     list-style: georgian;
 }
 
-#Navigation{
+#Navigation li{
 
+    display: inline;
     color: white;
     background-color: teal;
     font-size: 10px;
