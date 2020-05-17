@@ -10,7 +10,7 @@ h1{
 
 li{
 
-    color: black;
+    color: teal;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     list-style: georgian;
 }
@@ -18,7 +18,7 @@ li{
 #Navigation{
 
     color: white;
-    background-color: black;
+    background-color: teal;
     font-size: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 5px;
