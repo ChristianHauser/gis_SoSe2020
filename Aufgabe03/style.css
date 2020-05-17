@@ -36,15 +36,15 @@ body{
 }
 
 iframe{
-    border: 20px 20px teal;
+    padding: 20px 20px 20px 20px teal;
 }
 
 video{
-    border: 20px 20px teal;
+    padding: 20px 20px 20px 20px teal;
 }
 
 img{
-    border: 20px 20px teal;
+    padding: 20px 20px 20px 20px teal;
 }
 
 div{
