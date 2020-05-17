@@ -18,15 +18,31 @@ li{
 #Navigation li{
 
     display: inline;
+   
     
     background-color: teal;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     padding: 10px;
     text-decoration: red;
     color: white;
+    
+    
 }
+#Navigation{
+    overflow: hidden;
+    background-color: teal;
 
+}
+#Navigation a{
+
+    float: right;
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px;
+    text-decoration: cornsilk;
+}
 footer{
     font-style: italic;
 
@@ -38,24 +54,82 @@ body{
 }
 
 iframe{
+    border: 10px 10px 10px 10px blue;
     padding: 20px 20px 20px 20px teal;
+    align-content: space-around;
 }
 
 video{
+    border: 10px 10px 10px 10px blue;
     padding: 20px 20px 20px 20px teal;
+    
 }
 
 img{
+    border: 10px 10px 10px 10px blue;
     padding: 20px 20px 20px 20px teal;
 }
 
-div{
+#videobox{
     background-color: tomato;
     color: white;
 
     width: width="300";
-    height: height="490";
-    padding: 10px 10px 40px 10px;
-    border: 5px solid teal;
-    margin: 10px 10px 40px 10px;
+    
+    padding: 10px;
+    border: 20px solid teal;
+    margin: 10px;
 }
+audio{
+
+    background-color: black;
+}
+
+#navi{
+
+    align-content: center;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.content{
+    padding:16px;
+    align-content: center;
+    width: 800px;
+}
+
+.sticky + content{
+    padding-top:60px;
+}
+
+.module {
+    background: white;
+    
+    border: 1px solid #ccc;
+    margin: 3%;
+    > h2 {
+      padding: 1rem;
+      margin: 0 0 0.5rem 0;
+    }
+    > p {
+      padding: 0 1rem;
+    }
+    
+  }
+  
+  .stripe-1 {
+    color: white;
+    background: repeating-linear-gradient(
+      45deg,
+      #606dbc,
+      #606dbc 10px,
+      #465298 10px,
+      #465298 20px
+    );
+  }
+  .current{
+      background-color: white;
+  }

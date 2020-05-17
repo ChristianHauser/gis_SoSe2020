@@ -18,15 +18,31 @@ li{
 #Navigation li{
 
     display: inline;
+   
     
     background-color: teal;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     padding: 10px;
     text-decoration: red;
     color: white;
+    
+    
 }
+#Navigation{
+    overflow: hidden;
+    background-color: teal;
 
+}
+#Navigation a{
+
+    float: right;
+    display: block;
+    color: blue;
+    text-align: center;
+    padding: 14px;
+    text-decoration: cornsilk;
+}
 footer{
     font-style: italic;
 
@@ -38,66 +54,82 @@ body{
 }
 
 iframe{
+    border: 10px 10px 10px 10px blue;
     padding: 20px 20px 20px 20px teal;
+    align-content: space-around;
 }
 
 video{
+    border: 10px 10px 10px 10px blue;
     padding: 20px 20px 20px 20px teal;
+    
 }
 
 img{
+    border: 10px 10px 10px 10px blue;
     padding: 20px 20px 20px 20px teal;
 }
 
-div{
+#videobox{
     background-color: tomato;
     color: white;
 
     width: width="300";
-    height: height="490";
-    padding: 10px 10px 40px 10px;
-    border: 5px solid teal;
-    margin: 10px 10px 40px 10px;
+    
+    padding: 10px;
+    border: 20px solid teal;
+    margin: 10px;
+}
+audio{
+
+    background-color: black;
 }
 
-.hvr-rectangle-in {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    background: #2098D1;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+#navi{
+
+    align-content: center;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-#Navigation ul{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
+.content{
+    padding:16px;
+    align-content: center;
+    width: 800px;
 }
 
-#Navigation a{
-
-    display: block;
-padding: 3px;
-width: 160px;
-background-color: #036;
-border-bottom: 1px solid #eee;
-text-decoration: none;
+.sticky + content{
+    padding-top:60px;
 }
 
-#Navigation a:link, #Navigation a:visited
-{
-color: #EEE;
-}
-
-#Navigation a:hover
-{
-background-color: #369;
-color: #fff;
-}
+.module {
+    background: white;
+    
+    border: 1px solid #ccc;
+    margin: 3%;
+    > h2 {
+      padding: 1rem;
+      margin: 0 0 0.5rem 0;
+    }
+    > p {
+      padding: 0 1rem;
+    }
+    
+  }
+  
+  .stripe-1 {
+    color: white;
+    background: repeating-linear-gradient(
+      45deg,
+      #606dbc,
+      #606dbc 10px,
+      #465298 10px,
+      #465298 20px
+    );
+  }
+  .current{
+      background-color: white;
+  }
