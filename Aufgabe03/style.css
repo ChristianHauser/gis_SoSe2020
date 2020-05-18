@@ -19,6 +19,7 @@ body{
 
 .menu{
     position: sticky;
+    font: Sans-Serif;
     top: 0px;
     background-color: black;
     margin: 0px;
@@ -26,7 +27,7 @@ body{
 }
 
 .menu a{
-    font:menu;
+    font: Sans-Serif;
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 1px;
@@ -46,6 +47,7 @@ body{
 }
 
 .content{
+    font: Sans-Serif;
     align-content: center;
     padding: 0px 24px;
     text-align: center;
@@ -60,6 +62,7 @@ body{
 
 .socialmedia{
 
+    border-radius: 0px 0px 30px 30px;
     top: 0px;
     background-color: rgba(188, 225, 255, 0.863);
     margin: 0px;
@@ -78,3 +81,10 @@ body{
     text-align: center;
     padding: 16px 24px;
 }
+
+.socialmedia a:hover{
+
+    background-color: rgb(81, 81, 250);
+    color: black;
+}
+
