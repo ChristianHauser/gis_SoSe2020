@@ -30,7 +30,7 @@ body{
 .contained{
     
     width: 800px;
-    
+    display: inline-block;
     margin: 0 auto;
     
 }
