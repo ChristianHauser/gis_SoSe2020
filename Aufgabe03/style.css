@@ -30,8 +30,10 @@ header.div{
 
 
 .contained{
-   max-width: 800px;
+   width: 800px;
     display: inline-block;
+    background-color: black;
+    
 }
 .header div{
     font-family: Sans-Serif;
