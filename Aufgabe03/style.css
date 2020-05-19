@@ -279,7 +279,7 @@ footer p{
 div.header{
    
     text-align: center;
-    width: 800px;
+    
 }
 
 div.menu{
@@ -303,3 +303,8 @@ body{
 
     display: inline-block;
 }
+
+.audio article{
+    text-align: center;
+}
+
