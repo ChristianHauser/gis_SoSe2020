@@ -19,7 +19,7 @@ body{
     font-size: 24px;
     text-transform: uppercase;
     
-    display: inline-block;
+
     
 
     
@@ -31,11 +31,7 @@ body{
     width: 800px;
     
 }
-.header div{
-    font-family: Sans-Serif;
-    
-   
-}
+
 
 .menu{
 
