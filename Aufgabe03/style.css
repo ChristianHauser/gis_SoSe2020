@@ -4,9 +4,9 @@ body{
     background: #e1e1e1;
     position: center;
     font-family: Sans-Serif;
+    background-image: url(bg.png);
     
-   
-}
+   }
 .header{
     
     background: rgba(0, 0, 0, 0.9);
@@ -274,3 +274,4 @@ footer p{
 
     font-family: Sans-Serif;
 }
+
