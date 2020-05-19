@@ -309,9 +309,17 @@ article{
 }
 
 audio{
-    display: inline-block;
+    width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
 
 video{
 
-    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
 }
