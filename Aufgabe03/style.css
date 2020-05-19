@@ -109,7 +109,7 @@ body{
 
 h1 h2 h3 h4 h5 h6{
     font-family: Sans-Serif;
-    display: inline-block;
+    inset-block: center;
 }
 
 .content img{
@@ -232,7 +232,7 @@ a{
 
 iframe{
     font-family: Sans-Serif;
-   
+    align-content: center;
     text-align: center;
 }
 
@@ -305,7 +305,7 @@ body{
 }
 
 article{
-    position: absolute;
+    text-align: center;
 }
 
 audio{
@@ -315,3 +315,11 @@ audio{
   left: 50%;
   margin-left: -50px;
 
+video{
+
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+}
