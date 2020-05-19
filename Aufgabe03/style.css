@@ -283,7 +283,7 @@ div.header{
 
 div.menu{
 
-    max-width: 800px;
+    width: 800px;
     align-content: center;
     text-align: center;
 }
