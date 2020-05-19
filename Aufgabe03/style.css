@@ -25,7 +25,7 @@ body{
 
 .header div{
     font-family: Sans-Serif;
-    align-content: center;
+   display: inline-block;
 }
 
 .menu{
