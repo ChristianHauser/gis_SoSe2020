@@ -24,6 +24,10 @@ body{
      
 }
 
+header.div{
+    max-width: 800px;
+}
+
 
 .contained{
    max-width: 800px;
@@ -31,7 +35,7 @@ body{
 }
 .header div{
     font-family: Sans-Serif;
-   max-width: 800px;
+   
 }
 
 .menu{
