@@ -232,7 +232,7 @@ a{
 
 iframe{
     font-family: Sans-Serif;
-    align-content: center;
+   
     text-align: center;
 }
 
@@ -315,11 +315,3 @@ audio{
   left: 50%;
   margin-left: -50px;
 
-video{
-
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    left: 50%;
-    margin-left: -50px;
-}
