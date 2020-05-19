@@ -8,7 +8,7 @@ body{
     
    }
 .header{
-    
+    width: 800px;
     background: rgba(0, 0, 0, 0.9);
     padding: 0px;
     text-align: center;
@@ -19,13 +19,18 @@ body{
     font-size: 24px;
     text-transform: uppercase;
     
+
     
      
 }
 
+.contained{
+
+    display: inline-block;
+}
 .header div{
     font-family: Sans-Serif;
-   display: inline-block;
+   
 }
 
 .menu{
