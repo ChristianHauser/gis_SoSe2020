@@ -280,3 +280,10 @@ div.header{
     text-align: center;
     width: 800px;
 }
+
+div.menu{
+
+    max-width: 800px;
+    align-content: center;
+    text-align: center;
+}
