@@ -1,10 +1,10 @@
 body{
     padding: 0px;
     margin: 0px;
-    background: #e1e1e1;
+    
     position: center;
     font-family: Sans-Serif;
-    background-image: url(/gis_SoSe2020/Aufgabe03/bilder/background.png);
+    
     
    }
 .header{
@@ -291,4 +291,9 @@ div.menu{
 
    width: 35;
    height: 35;
+}
+
+body{
+
+    background-image: url(/Aufgabe03/bilder/background.png);
 }
