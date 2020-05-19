@@ -304,7 +304,14 @@ body{
     display: inline-block;
 }
 
-.audio article{
+article{
     text-align: center;
 }
 
+audio{
+    display: inline-block;
+
+video{
+
+    display: inline-block;
+}
