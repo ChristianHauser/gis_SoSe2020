@@ -118,6 +118,7 @@ h1 h2 h3 h4 h5 h6{
     font-family: Sans-Serif;
     inset-block: center;
     font-size: 30px;
+    color: rgb(122, 122, 252);;
 }
 
 .content img{
