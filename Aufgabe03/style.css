@@ -277,5 +277,6 @@ footer p{
 
 div.header{
     align-content: center;
+    text-align: center;
     width: 800px;
 }
