@@ -3,7 +3,7 @@ body{
     margin: 0px;
     background: #e1e1e1;
     position: center;
-    
+    font-family: Sans-Serif;
     
    
 }
@@ -15,7 +15,7 @@ body{
     color: white;
     margin: 0;
     letter-spacing: 1px;
-    font: Sans-Serif;
+    font-family: Sans-Serif;
     font-size: 24px;
     text-transform: uppercase;
     
@@ -24,10 +24,13 @@ body{
 }
 
 .header div{
+    font-family: Sans-Serif;
     align-content: center;
 }
 
 .menu{
+
+    font-family: Sans-Serif;
     position: sticky;
     font: Sans-Serif;
     top: 0px;
@@ -38,7 +41,7 @@ body{
 }
 
 .menu a{
-    font: Sans-Serif;
+    font-family: Sans-Serif;
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 1px;
@@ -51,6 +54,7 @@ body{
 
 .menu a:hover{
 
+    font-family: Sans-Serif;
     background-color: rgb(81, 81, 250);
     color: black;
 
@@ -58,7 +62,7 @@ body{
 }
 
 .content{
-    font: Sans-Serif;
+    font-family: Sans-Serif;
     align-content: center;
     padding: 0px 24px;
     text-align: center;
@@ -68,11 +72,13 @@ body{
 
 .current{
 
+    font-family: Sans-Serif;
     background-color: rgb(122, 122, 252);
 }
 
 .socialmedia{
 
+    font-family: Sans-Serif;
     border-radius: 0px 0px 30px 30px;
     top: 0px;
     background-color: rgba(188, 225, 255, 0.863);
@@ -82,6 +88,7 @@ body{
 
 .socialmedia a{
 
+    font-family: Sans-Serif;
     font:menu;
     text-decoration: none;
     font-size: 18px;
@@ -95,23 +102,24 @@ body{
 
 .socialmedia a:hover{
 
+    font-family: Sans-Serif;
     background-color: rgb(81, 81, 250);
     color: black;
 }
 
 h2 h1 h3 h4 h5 h6{
-    font: Sans-Serif;
+    font-family: Sans-Serif;
 }
 
 .content img{
 
     
-    width: 800 px;
+    width: 800px;
 }
 
 @import "compass/css3";
 
-@import url(https://fonts.googleapis.com/css?family=Merriweather);
+
 $red: #e74c3c;
 
 *, 
@@ -121,21 +129,24 @@ $red: #e74c3c;
 }
 
 html, body {
+    font-family: Sans-Serif;
   background: #f1f1f1;
-  font-family: 'Merriweather', sans-serif;
+  font-family:  Sans-Serif;
   padding: 1em;
 }
 
 h1 {
+    font-family: Sans-Serif;
    text-align: center;
    color: #a8a8a8;
    @include text-shadow(1px 1px 0 rgba(white, 1));
 }
 
 form {
+    font-family: Sans-Serif;
    max-width: 600px;
    text-align: center;
-   margin: 20px auto;
+   margin: 80px auto;
   
   input, textarea {
      border:0; outline:0;
@@ -144,7 +155,7 @@ form {
      display: block;
      width: 100%;
      margin-top: 1em;
-     font-family: 'Merriweather', sans-serif;
+     font-family: Sans-Serif ;
      @include box-shadow(0 1px 1px rgba(black, 0.1));
      resize: none;
     
@@ -154,6 +165,8 @@ form {
   }
   
   #input-submit {
+
+    font-family: Sans-Serif;
      color: white; 
      background: $red;
      cursor: pointer;
@@ -164,12 +177,14 @@ form {
   }
   
   textarea {
+    font-family: Sans-Serif;
       height: 126px;
   }
 }
 
 
 .half {
+    font-family: Sans-Serif;
   float: left;
   width: 48%;
   margin-bottom: 1em;
@@ -205,14 +220,17 @@ form {
 p{
     align-content: center;
     text-align: center;
+    font-family: Sans-Serif;
 }
 
 a{
+    font-family: Sans-Serif;
     align-content: center;
     text-align: center;
 }
 
 iframe{
+    font-family: Sans-Serif;
     align-content: center;
     text-align: center;
 }
@@ -220,18 +238,39 @@ iframe{
 
 ul{
 
+    font-family: Sans-Serif;
     align-content: center;
-    text-align: center;
+    
 }
 
 li{
-
+    font-family: Sans-Serif;
+    list-style: none;
     
+    align-items: center;
     text-align: center;
 }
 
 hr{
+    font-family: Sans-Serif;
 
     align-content: center;
     width: 800px;
+}
+
+ol{
+    font-family: Sans-Serif;
+    align-content: center;
+    list-style: circle;
+}
+
+footer{
+
+    font-family: Sans-Serif;
+    text-align: center;
+}
+
+footer p{
+
+    font-family: Sans-Serif;
 }
