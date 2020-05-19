@@ -11,7 +11,7 @@ body{
     
     background: rgba(0, 0, 0, 0.9);
     padding: 0px;
-    
+    text-align: center;
     color: white;
     margin: 0px;
     letter-spacing: 1px;
@@ -19,7 +19,6 @@ body{
     font-size: 24px;
     text-transform: uppercase;
     position: absolute;
-    
 
     
      
@@ -27,8 +26,8 @@ body{
 
 
 .contained{
-   width: 800px;
-   
+    width: 800px;
+    display: inline-block;
 }
 
 
