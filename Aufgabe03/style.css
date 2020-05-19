@@ -276,7 +276,7 @@ footer p{
 }
 
 div.header{
-    align-content: center;
+   
     text-align: center;
     width: 800px;
 }
@@ -296,4 +296,9 @@ div.menu{
 body{
 
     background-image: url(/Aufgabe03/bilder/background.png);
+}
+
+.contained{
+
+    display: inline-block;
 }
