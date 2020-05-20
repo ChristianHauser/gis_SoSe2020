@@ -58,7 +58,7 @@ body{
     position: sticky;
     font: Sans-Serif;
     top: 0px;
-    left: 239px;
+    left: 360px;
     background-color: black;
     margin: 0px;
     
@@ -114,7 +114,7 @@ body{
     margin: 0px;
     overflow: hidden;
     position: absolute;
-    left: 1040px;
+    left: 1200px;
 }
 
 .socialmedia a{
