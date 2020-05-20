@@ -4,8 +4,7 @@ body{
     
     position: center;
     font-family: Sans-Serif;
-    width: 800px; 
-    text-align: center
+    
     
     
    }
@@ -315,6 +314,7 @@ body{
 
     background-image: url(https://gabriel-rausch.github.io/EIA1-SoSe20/L03/task_material/images/bg.png);
     text-align: center;
+    
 }
 
 .contained{
