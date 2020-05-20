@@ -79,6 +79,9 @@ body{
 
 }
 
+.content h2{
+    text-align: center;
+}
 .current{
 
     font-family: Sans-Serif;
