@@ -27,27 +27,46 @@ body{
      
 }
 
+.header div{
+
+    max-width: 800px;
+}
+
+#Headerid{
+    width: 800px;
+    text-align: center;
+    
+}
+
 
 .contained{
-    
+    background: black;
     width: 800px;
     display: inline-block;
     margin: 0 auto;
+    letter-spacing: 1px;
+    font-family: Sans-Serif;
+    font-size: 24px;
+    text-transform: uppercase;
     
 }
 
 
 .menu{
-
+    
     font-family: Sans-Serif;
     position: sticky;
     font: Sans-Serif;
     top: 0px;
+    left: 239px;
     background-color: black;
     margin: 0px;
+    
     overflow: hidden;
+    
 
 }
+
 
 .menu a{
     font-family: Sans-Serif;
@@ -89,11 +108,13 @@ body{
 .socialmedia{
 
     font-family: Sans-Serif;
-    border-radius: 0px 0px 30px 30px;
-    top: 0px;
+    border-radius: 30px 30px 30px 30px;
+    top: 30px;
     background-color: rgba(188, 225, 255, 0.863);
     margin: 0px;
     overflow: hidden;
+    position: absolute;
+    left: 1040px;
 }
 
 .socialmedia a{
