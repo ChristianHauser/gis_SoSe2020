@@ -71,6 +71,10 @@ img[alt="Getränke"]{
     width: 70%;
 }
 
+.current{
+
+    background-color: blue;
+}
 .content{
     text-align: center;
     display: block;
@@ -267,6 +271,10 @@ img[alt="Getränke"]{
         margin: 0px;
         padding: 50px;
         font: italic;    
+    }
+    .current{
+
+        background-color: blue;
     }
     
     .menu{
@@ -531,6 +539,11 @@ img[alt="Getränke"]{
         margin: 0px;
         padding: 50px;
         font: italic;    
+    }
+
+    .current{
+
+        background-color: blue;
     }
     
     .menu{
