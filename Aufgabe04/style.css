@@ -163,6 +163,9 @@ img[alt="Getränke"]{
     
 }
 
+.article p{
+    max-width: 351px;
+}
 
 
 .bildtext{
