@@ -529,6 +529,7 @@ img[alt="Getränke"]{
 @media only screen and (min-width:600px){
 
     .header h1{
+        size: 100%;
         text-align: center;
         display: block;
         background-color: red;
