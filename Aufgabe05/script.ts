@@ -62,7 +62,7 @@
           _beschreibung: "superwasser12",
        };
 
-       let wasserProducts = [ Mineralwasser1,  Mineralwasser2, Mineralwasser3, Mineralwasser4, Mineralwasser5, Mineralwasser6,Mineralwasser7,Mineralwasser8,Mineralwasser9,Mineralwasser10,Mineralwasser12];
+       let wasserProducts = [ Mineralwasser1,  Mineralwasser2, Mineralwasser3, Mineralwasser4, Mineralwasser5, Mineralwasser6,Mineralwasser7,Mineralwasser8,Mineralwasser9,Mineralwasser10,Mineralwasser11,Mineralwasser12];
       
        for (let _index = 0; _index < wasserProducts.length; _index++) {
 
@@ -72,69 +72,69 @@
  
     (function(Softdrinks){
 
-        let Softdrink1 = {
+        let softdrink1 = {
             _img:"35193-1.png",
             _beschreibung: "Softdrink1",
          };
      
-         let Softdrink2 = {
+         let softdrink2 = {
              _img:"35193-1.png",
              _beschreibung: "Softdrink2",
           };
      
-          let Softdrink3 = {
+          let softdrink3 = {
              _img:"35193-1.png",
              _beschreibung: "Softdrink3",
           };
      
-          let Softdrink4 = {
+          let softdrink4 = {
              _img:"35193-1.png",
              _beschreibung: "Softdrink4",
           };
       
-          let Softdrink5 = {
+          let softdrink5 = {
               _img:"35193-1.png",
               _beschreibung: "Softdrink5",
            };
       
-           let Softdrink6 = {
+           let softdrink6 = {
               _img:"35193-1.png",
               _beschreibung: "Softdrink6",
            };
           
-           let Softdrink7 = {
+           let softdrink7 = {
              _img:"35193-1.png",
              _beschreibung: "Softdrink7",
           };
       
-          let Softdrink8 = {
+          let softdrink8 = {
               _img:"35193-1.png",
               _beschreibung: "Softdrink8",
            };
       
-           let Softdrink9 = {
+           let softdrink9 = {
               _img:"35193-1.png",
               _beschreibung: "Softdrink9",
            };
       
-           let Softdrink10 = {
+           let softdrink10 = {
               _img:"35193-1.png",
               _beschreibung: "Softdrink10",
            };
        
-           let Softdrink11 = {
+           let softdrink11 = {
                _img:"35193-1.png",
                _beschreibung: "Softdrink11",
             };
        
-            let Softdrink12 = {
+            let softdrink12 = {
                _img:"35193-1.png",
                _beschreibung: "Softdrink12",
             };
 
-    }
+    };
 
-    let softProducts = [ Mineralwasser1,  Mineralwasser2, Mineralwasser3, Mineralwasser4, Mineralwasser5, Mineralwasser6,Mineralwasser7,Mineralwasser8,Mineralwasser9,Mineralwasser10,Mineralwasser12];
+    let softProducts = [ softdrink1,  softdrink2, softdrink3, softdrink4, softdrink5, softdrink6,softdrink7,softdrink8, softdrink9,softdrink10, softdrink11,softdrink12];
       
        for (let _index = 0; _index < softProducts.length; _index++) {
 
