@@ -66,7 +66,7 @@
       
        for (let _index = 0; _index < wasserProducts.length; _index++) {
 
-        let text:"Sorry für die unvollständige Abgabe komm noch nicht ganz auf typescript klar und diese Abgabe wird selbstverständlich am Mittwoch verteidigt, einen schönen Tag noch Lg Chris!",
+        let text:"Sorry für die unvollständige Abgabe komm noch nicht ganz auf typescript klar und diese Abgabe wird selbstverständlich am Mittwoch verteidigt, einen schönen Tag wünsche ich noch! Lg Chris",
        }
 
  
