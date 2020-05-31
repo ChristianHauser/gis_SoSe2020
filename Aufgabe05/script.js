@@ -50,6 +50,7 @@
     };
     let wasserProducts = [Mineralwasser1, Mineralwasser2, Mineralwasser3, Mineralwasser4, Mineralwasser5, Mineralwasser6, Mineralwasser7, Mineralwasser8, Mineralwasser9, Mineralwasser10, Mineralwasser11, Mineralwasser12];
     for (let _index = 0; _index < wasserProducts.length; _index++) {
+        let text;
     }
     (function (Softdrinks) {
         let softdrink1 = {
