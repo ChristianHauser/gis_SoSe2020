@@ -9,7 +9,7 @@ namespace Aufgabe5 {
     }
 
     //Wasser
-    const wasser1: Artikel = {bild: "wasser1.png" , name: "Superwasser", beschreibung: "Hohes Material. Sehr beqeuem.", preis: "1,00€"};
+    const wasser1: Artikel = {bild: "wasser1.png" , name: "Superwasser", beschreibung: "Extremwasser.", preis: "1,00€"};
     const wasser2: Artikel = {bild: "wasser2.png", name: "Wasser Super", beschreibung: "Wow was für tolles Wasser", preis: "2,00€"};
     const wasser3: Artikel = {bild: "wasser3.png", name: "Tolles Wasser", beschreibung: "Erfrischend Prickelnd", preis: "1,30€"};
     const wasser4: Artikel = {bild: "wasser4.png", name: "Wasserrrr", beschreibung: "Neu jetzt in Medium!", preis: "1,19€"};
