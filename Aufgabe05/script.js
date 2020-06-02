@@ -7,7 +7,7 @@ var Aufgabe5;
     // H2 Titel wasser mit ID
     let produktTitel = document.createElement("h2");
     produktTitel.setAttribute("id", "wasserlink");
-    produktTitel.innerHTML = "wasser";
+    produktTitel.innerHTML = "Wasser";
     divinhalt.appendChild(produktTitel);
     //Klasse wasser
     let wasserdiv = document.createElement("div");
@@ -48,7 +48,7 @@ var Aufgabe5;
     //H2 softdrinkt Titel mit ID
     let softdrinktTitel = document.createElement("h2");
     softdrinktTitel.setAttribute("id", "softdrinktlink");
-    softdrinktTitel.innerHTML = "softdrinkt";
+    softdrinktTitel.innerHTML = "Softdrink";
     divinhalt.appendChild(softdrinktTitel);
     //neue Klasse softdrinkt
     let softdrinktdiv = document.createElement("div");

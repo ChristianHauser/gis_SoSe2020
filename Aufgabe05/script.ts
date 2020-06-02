@@ -7,7 +7,7 @@ namespace Aufgabe5 {
     // H2 Titel wasser mit ID
     let produktTitel: HTMLElement = document.createElement("h2");
     produktTitel.setAttribute("id", "wasserlink");
-    produktTitel.innerHTML = "wasser";
+    produktTitel.innerHTML = "Wasser";
     divinhalt.appendChild(produktTitel);
 
     //Klasse wasser
@@ -60,7 +60,7 @@ namespace Aufgabe5 {
     //H2 softdrinkt Titel mit ID
     let softdrinktTitel: HTMLElement = document.createElement("h2");
     softdrinktTitel.setAttribute("id", "softdrinktlink");
-    softdrinktTitel.innerHTML = "softdrinkt";
+    softdrinktTitel.innerHTML = "Softdrink";
     divinhalt.appendChild(softdrinktTitel);
 
     //neue Klasse softdrinkt

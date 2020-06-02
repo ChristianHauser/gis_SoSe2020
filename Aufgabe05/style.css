@@ -260,7 +260,33 @@ img[alt="Getränke"]{
     font-size: 20px;
 }
 
+.zenter{
 
+    text-align: center;
+}
+
+.inhalt{
+
+    background-color: red;
+}
+
+.wasser{
+    display: inline-block;
+    
+    color: black;
+    border: black solid 2px;
+}
+
+.artikel{
+
+    background-color: white;
+    border: black solid 2px;
+    padding-bottom: 20px;
+}
+
+.softdrinkt{
+    display: inline-block;
+}
 @media only screen and (min-width:1024px){
 
     .header h1{
