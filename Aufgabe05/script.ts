@@ -92,7 +92,7 @@ namespace Aufgabe5 {
         let preiselement: HTMLElement = document.createElement("i");
         divElement.appendChild(preiselement);
         
-        preiselement.innerHTML = softDrinks[i].preis.toString();
+        preiselement.innerHTML = softDrinks[i].preis.toString() + "€";
 
         
         let brelement: HTMLElement = document.createElement("br");

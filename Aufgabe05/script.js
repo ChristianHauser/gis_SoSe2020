@@ -70,7 +70,7 @@ var Aufgabe5;
         beschreibungelement.innerHTML = Aufgabe5.softDrinks[i].beschreibung;
         let preiselement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = Aufgabe5.softDrinks[i].preis.toString();
+        preiselement.innerHTML = Aufgabe5.softDrinks[i].preis.toString() + "€";
         let brelement = document.createElement("br");
         divElement.appendChild(brelement);
         let brelement2 = document.createElement("br");
