@@ -34,7 +34,7 @@ var Aufgabe5;
         //Preis hinzufügen
         let preiselement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = Aufgabe5.mineralWasser[i].preis.toString();
+        preiselement.innerHTML = Aufgabe5.mineralWasser[i].preis.toString() + "€";
         //Br tags
         let brelement = document.createElement("br");
         divElement.appendChild(brelement);

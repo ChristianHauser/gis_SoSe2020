@@ -14,7 +14,7 @@ namespace Aufgabe5 {
     const wasser3: Artikel = {bild: "/gis_SoSe2020/Aufgabe05/Bilder/Getränkbilder/Mineralwasser/wasser3.png", name: "Tolles Wasser", beschreibung: "Erfrischend Prickelnd", preis: 1.30};
     const wasser4: Artikel = {bild: "/gis_SoSe2020/Aufgabe05/Bilder/Getränkbilder/Mineralwasser/wasser4.png", name: "Wasserrrr", beschreibung: "Neu jetzt in Medium!", preis: 1.20};
     const wasser5: Artikel = {bild: "/gis_SoSe2020/Aufgabe05/Bilder/Getränkbilder/Mineralwasser/wasser5.jpg", name: "Waser", beschreibung: "MIt extra viel Kohlensäure", preis: 1.23};
-    const wasser6: Artikel = {bild: "/gis_SoSe2020/Aufgabe05/Bilder/Getränkbilder/Mineralwasser/wasser6.jpg", name: "Wasser", beschreibung: "Atmungsaktiv", preis: 1.20};
+    const wasser6: Artikel = {bild: "/gis_SoSe2020/Aufgabe05/Bilder/Getränkbilder/Mineralwasser/wasser6.jpg", name: "Wasser", beschreibung: "Atmungsaktiv", preis: 1.20 };
     const wasser7: Artikel = {bild: "/gis_SoSe2020/Aufgabe05/Bilder/Getränkbilder/Mineralwasser/wasser7.jpg", name: "Wasser", beschreibung: "Nur vom besten", preis: 1.30};
 
     

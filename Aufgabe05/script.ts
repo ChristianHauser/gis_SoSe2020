@@ -41,8 +41,9 @@ namespace Aufgabe5 {
 
         //Preis hinzufügen
         let preiselement: HTMLElement = document.createElement("i");
-        divElement.appendChild(preiselement);
-        preiselement.innerHTML = mineralWasser[i].preis.toString();
+        divElement.appendChild(preiselement );
+        preiselement.innerHTML = mineralWasser[i].preis.toString() + "€";
+        
 
         //Br tags
         let brelement: HTMLElement = document.createElement("br");
