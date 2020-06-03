@@ -16,7 +16,7 @@ namespace Aufgabe5 {
     divinhalt.appendChild(wasserdiv);
 
 
-    //Schleife die den array mit den Kleidern komplett durchgeht. 
+    //Schleife die den array mit den Artikeln komplett durchgeht. 
     for (let i: number = 0; i < mineralWasser.length; i++) {
 
         //Jeder neue Artikel wird in Klasse artikel gespeichern
@@ -69,7 +69,7 @@ namespace Aufgabe5 {
     divinhalt.appendChild(softdrinktdiv);
 
 
-    //Das selbe Spiel wie vorhin
+    //Wiederholung der Schritte
     for (let i: number = 0; i < softDrinks.length; i++) {
 
         let divElement: HTMLElement = document.createElement("div");
@@ -103,6 +103,6 @@ namespace Aufgabe5 {
         buttonElement.innerHTML = "Kaufen";
         divElement.appendChild(buttonElement);
     }
-//Den ganzen Inhalt oben in den html main Tag hinzufügen
+//Gesamter Inhalt in main tag
     document.getElementById("main")?.appendChild(divinhalt);
 }

@@ -13,7 +13,7 @@ var Aufgabe5;
     let wasserdiv = document.createElement("div");
     wasserdiv.setAttribute("class", "wasser");
     divinhalt.appendChild(wasserdiv);
-    //Schleife die den array mit den Kleidern komplett durchgeht. 
+    //Schleife die den array mit den Artikeln komplett durchgeht. 
     for (let i = 0; i < Aufgabe5.mineralWasser.length; i++) {
         //Jeder neue Artikel wird in Klasse artikel gespeichern
         let divElement = document.createElement("div");
@@ -54,7 +54,7 @@ var Aufgabe5;
     let softdrinktdiv = document.createElement("div");
     softdrinktdiv.setAttribute("class", "softdrinkt");
     divinhalt.appendChild(softdrinktdiv);
-    //Das selbe Spiel wie vorhin
+    //Wiederholung der Schritte
     for (let i = 0; i < Aufgabe5.softDrinks.length; i++) {
         let divElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
@@ -79,7 +79,7 @@ var Aufgabe5;
         buttonElement.innerHTML = "Kaufen";
         divElement.appendChild(buttonElement);
     }
-    //Den ganzen Inhalt oben in den html main Tag hinzufügen
+    //Gesamter Inhalt in main tag
     document.getElementById("main")?.appendChild(divinhalt);
 })(Aufgabe5 || (Aufgabe5 = {}));
 //# sourceMappingURL=script.js.map
