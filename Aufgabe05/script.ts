@@ -1,5 +1,8 @@
-namespace Aufgabe5 {
+namespace Aufgabe05 {
     
+    let counterstart: number = 0;
+    const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
+
     //Klasse Inhalt
     let divinhalt: HTMLElement = document.createElement("div");
     divinhalt.setAttribute("class", "inhalt");
@@ -15,7 +18,8 @@ namespace Aufgabe5 {
     wasserdiv.setAttribute("class", "wasser");
     divinhalt.appendChild(wasserdiv);
 
-
+    let summe: number = 0;
+    let zahler: number = 0;
     //Schleife die den array mit den Artikeln komplett durchgeht. 
     for (let i: number = 0; i < mineralWasser.length; i++) {
 
@@ -55,7 +59,18 @@ namespace Aufgabe5 {
         //Kaufen Button
         let buttonElement: HTMLElement = document.createElement("button");
         buttonElement.innerHTML = "Kaufen";
+        
         divElement.appendChild(buttonElement);
+        buttonElement.addEventListener("click", wasserPreis);
+
+        function wasserPreis(_event: Event): void {
+            summe = summe + mineralWasser[i].preis;
+            summe = summe * 1000;
+            summe = summe / 1000;
+            console.log("Gesamtsumme: " + summe + " €");
+             }
+
+       
     }
 
     //H2 softdrinkt Titel mit ID
@@ -104,7 +119,40 @@ namespace Aufgabe5 {
         let buttonElement: HTMLElement = document.createElement("button");
         buttonElement.innerHTML = "Kaufen";
         divElement.appendChild(buttonElement);
+        
+        divElement.appendChild(buttonElement);
+        buttonElement.addEventListener("click", softdrinkPreis);
+
+        
+
+        function softdrinkPreis(_event: Event): void {
+
+            summe = summe + softDrinks[i].preis;
+            summe = summe * 1000;
+            summe = summe / 1000;
+            console.log("Gesamtsumme=" + summe + "€");
+            
+        }
+
+
     }
+
+    function wasserPreis(_event: Event): void{
+
+        counterstart++;
+        counter.innerHTML = "" + counterstart;
+
+    }
+
+    function softdrinkPreis(_event: Event): void{
+
+        counterstart++;
+        counter.innerHTML = "" + counterstart;
+
+    }
+    
+
+    
 //Gesamter Inhalt in main tag
     document.getElementById("main")?.appendChild(divinhalt);
 }
