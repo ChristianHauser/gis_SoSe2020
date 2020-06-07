@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe5;
-(function (Aufgabe5) {
+var Aufgabe06;
+(function (Aufgabe06) {
     let summe = 0;
     let zahler = 0;
     //Klasse Inhalt
@@ -16,27 +16,27 @@ var Aufgabe5;
     wasserdiv.setAttribute("class", "wasser");
     divinhalt.appendChild(wasserdiv);
     //Schleife die den array mit den Artikeln komplett durchgeht. 
-    for (let i = 0; i < Aufgabe5.mineralWasser.length; i++) {
+    for (let i = 0; i < Aufgabe06.artikelArray.length; i++) {
         //Jeder neue Artikel wird in Klasse artikel gespeichern
         let divElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         wasserdiv.appendChild(divElement);
         //Bild hinzufügen
         let bildElement = document.createElement("img");
-        bildElement.setAttribute("src", Aufgabe5.mineralWasser[i].bild);
+        bildElement.setAttribute("src", Aufgabe06.artikelArray[i].bild);
         divElement.appendChild(bildElement);
         //Titel hinzufügen
         let titelElement = document.createElement("h3");
         divElement.appendChild(titelElement);
-        titelElement.innerHTML = Aufgabe5.mineralWasser[i].name;
+        titelElement.innerHTML = Aufgabe06.artikelArray[i].name;
         //Beschreibung hinzufügen
         let beschreibungelement = document.createElement("p");
         divElement.appendChild(beschreibungelement);
-        beschreibungelement.innerHTML = Aufgabe5.mineralWasser[i].beschreibung;
+        beschreibungelement.innerHTML = Aufgabe06.artikelArray[i].beschreibung;
         //Preis hinzufügen
         let preiselement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = Aufgabe5.mineralWasser[i].preis.toString() + "€";
+        preiselement.innerHTML = Aufgabe06.artikelArray[i].preis.toString() + "€";
         //Br tags
         let brelement = document.createElement("br");
         divElement.appendChild(brelement);
@@ -47,9 +47,16 @@ var Aufgabe5;
         buttonElement.innerHTML = "Kaufen";
         divElement.appendChild(buttonElement);
         buttonElement.addEventListener("click", counterbutton);
+        function artikelsumme(_event) {
+            summe = summe + Aufgabe06.artikelArray[i].preis;
+            console.log("Gesamtsumme: " + summe + " €");
+        }
     }
+    let kreisElement = document.createElement("div");
+    kreisElement.innerHTML = (zahler.toString());
+    divElement.appendChild(kreisElement);
     function counterbutton(_event) {
-        console.log(Aufgabe5.mineralWasser[0].preis);
+        console.log(Aufgabe06.artikelArray[0].preis);
     }
     //H2 softdrinkt Titel mit ID
     let softdrinktTitel = document.createElement("h2");
@@ -61,22 +68,22 @@ var Aufgabe5;
     softdrinktdiv.setAttribute("class", "softdrinkt");
     divinhalt.appendChild(softdrinktdiv);
     //Wiederholung der Schritte
-    for (let i = 0; i < Aufgabe5.softDrinks.length; i++) {
+    for (let i = 0; i < Aufgabe06.artikelArray.length; i++) {
         let divElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         softdrinktdiv.appendChild(divElement);
         let bildElement = document.createElement("img");
-        bildElement.setAttribute("src", Aufgabe5.softDrinks[i].bild);
+        bildElement.setAttribute("src", Aufgabe06.artikelArray[i].bild);
         divElement.appendChild(bildElement);
         let titelElement = document.createElement("h3");
         divElement.appendChild(titelElement);
-        titelElement.innerHTML = Aufgabe5.softDrinks[i].name;
+        titelElement.innerHTML = Aufgabe06.artikelArray[i].name;
         let beschreibungelement = document.createElement("p");
         divElement.appendChild(beschreibungelement);
-        beschreibungelement.innerHTML = Aufgabe5.softDrinks[i].beschreibung;
+        beschreibungelement.innerHTML = Aufgabe06.artikelArray[i].beschreibung;
         let preiselement = document.createElement("i");
         divElement.appendChild(preiselement);
-        preiselement.innerHTML = Aufgabe5.softDrinks[i].preis.toString() + "€";
+        preiselement.innerHTML = Aufgabe06.artikelArray[i].preis.toString() + "€";
         let brelement = document.createElement("br");
         divElement.appendChild(brelement);
         let brelement2 = document.createElement("br");
@@ -87,5 +94,5 @@ var Aufgabe5;
     }
     //Gesamter Inhalt in main tag
     document.getElementById("main")?.appendChild(divinhalt);
-})(Aufgabe5 || (Aufgabe5 = {}));
+})(Aufgabe06 || (Aufgabe06 = {}));
 //# sourceMappingURL=script.js.map

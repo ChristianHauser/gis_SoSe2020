@@ -1,9 +1,8 @@
-namespace Aufgabe5 {
+namespace Aufgabe06 {
     
 
     let summe: number = 0;
     let zahler: number = 0;
-
 
     //Klasse Inhalt
     let divinhalt: HTMLElement = document.createElement("div");
@@ -22,7 +21,7 @@ namespace Aufgabe5 {
 
 
     //Schleife die den array mit den Artikeln komplett durchgeht. 
-    for (let i: number = 0; i < mineralWasser.length; i++) {
+    for (let i: number = 0; i < artikelArray.length; i++) {
 
         //Jeder neue Artikel wird in Klasse artikel gespeichern
         let divElement: HTMLElement = document.createElement("div");
@@ -31,23 +30,23 @@ namespace Aufgabe5 {
 
         //Bild hinzufügen
         let bildElement: HTMLElement = document.createElement("img");
-        bildElement.setAttribute("src", mineralWasser[i].bild);
+        bildElement.setAttribute("src", artikelArray[i].bild);
         divElement.appendChild(bildElement);
 
         //Titel hinzufügen
         let titelElement: HTMLElement = document.createElement("h3");
         divElement.appendChild(titelElement);
-        titelElement.innerHTML = mineralWasser[i].name;
+        titelElement.innerHTML = artikelArray[i].name;
 
         //Beschreibung hinzufügen
         let beschreibungelement: HTMLElement = document.createElement("p");
         divElement.appendChild(beschreibungelement);
-        beschreibungelement.innerHTML = mineralWasser[i].beschreibung;
+        beschreibungelement.innerHTML = artikelArray[i].beschreibung;
 
         //Preis hinzufügen
         let preiselement: HTMLElement = document.createElement("i");
         divElement.appendChild(preiselement );
-        preiselement.innerHTML = mineralWasser[i].preis.toString() + "€";
+        preiselement.innerHTML = artikelArray[i].preis.toString() + "€";
         
 
         //Br tags
@@ -62,13 +61,25 @@ namespace Aufgabe5 {
         buttonElement.innerHTML = "Kaufen";
         divElement.appendChild(buttonElement);
         buttonElement.addEventListener("click", counterbutton);
+
+        function artikelsumme(_event: Event): void {
+            summe = summe + artikelArray[i].preis;
+            console.log("Gesamtsumme: " + summe + " €");
+             }
     }
+    
+
+    
+    let kreisElement: HTMLElement = document.createElement("div");
+    kreisElement.innerHTML = (zahler.toString());
+    divElement.appendChild(kreisElement);
     
     function counterbutton(_event: Event): void {
 
-        console.log(mineralWasser[0].preis);
+        console.log(artikelArray[0].preis);
         
     }
+
 
     //H2 softdrinkt Titel mit ID
     let softdrinktTitel: HTMLElement = document.createElement("h2");
@@ -83,28 +94,28 @@ namespace Aufgabe5 {
 
 
     //Wiederholung der Schritte
-    for (let i: number = 0; i < softDrinks.length; i++) {
+    for (let i: number = 0; i < artikelArray.length; i++) {
 
         let divElement: HTMLElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         softdrinktdiv.appendChild(divElement);
 
         let bildElement: HTMLElement = document.createElement("img");
-        bildElement.setAttribute("src", softDrinks[i].bild);
+        bildElement.setAttribute("src", artikelArray[i].bild);
         divElement.appendChild(bildElement);
 
         let titelElement: HTMLElement = document.createElement("h3");
         divElement.appendChild(titelElement);
-        titelElement.innerHTML = softDrinks[i].name;
+        titelElement.innerHTML = artikelArray[i].name;
 
         let beschreibungelement: HTMLElement = document.createElement("p");
         divElement.appendChild(beschreibungelement);
-        beschreibungelement.innerHTML = softDrinks[i].beschreibung;
+        beschreibungelement.innerHTML = artikelArray[i].beschreibung;
 
         let preiselement: HTMLElement = document.createElement("i");
         divElement.appendChild(preiselement);
         
-        preiselement.innerHTML = softDrinks[i].preis.toString() + "€";
+        preiselement.innerHTML = artikelArray[i].preis.toString() + "€";
 
         
         let brelement: HTMLElement = document.createElement("br");
