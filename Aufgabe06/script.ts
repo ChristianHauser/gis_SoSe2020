@@ -142,8 +142,10 @@ namespace Aufgabe06 {
 
         counterstart++;
         counter.innerHTML = "" + counterstart;
+        
 
     }
+
 
     
     
