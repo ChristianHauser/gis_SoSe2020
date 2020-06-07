@@ -131,6 +131,9 @@ namespace Aufgabe06 {
             summe = summe * 1000;
             summe = summe / 1000;
             console.log("Gesamtsumme=" + summe + "€");
+            counterstart++;
+            counter.innerHTML = "" + counterstart;
+        
             
         }
         
@@ -138,13 +141,7 @@ namespace Aufgabe06 {
 
     }
 
-    function counterCounter(_event: Event): void{
-
-        counterstart++;
-        counter.innerHTML = "" + counterstart;
-        
-
-    }
+    
 
 
     
