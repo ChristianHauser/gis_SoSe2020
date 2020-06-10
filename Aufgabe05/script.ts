@@ -137,14 +137,14 @@ namespace Aufgabe05 {
 
     }
 
-    function wasserPreis(_event: Event): void{
+    function wasserPreis( _event: Event): void{
 
         counterstart++;
         counter.innerHTML = "" + counterstart;
 
     }
 
-    function softdrinkPreis(_event: Event): void{
+    function softdrinkPreis (_event: Event): void{
 
         counterstart++;
         counter.innerHTML = "" + counterstart;

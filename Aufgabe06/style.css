@@ -270,7 +270,7 @@ img[alt="Getränke"]{
     background-color: red;
 }
 
-.wasser{
+#wasser{
     display: inline-block;
     
     color: black;
