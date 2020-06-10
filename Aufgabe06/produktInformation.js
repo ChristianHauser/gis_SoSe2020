@@ -7,7 +7,7 @@ var Aufgabe07;
     const artikel3 = { bild: "/gis_SoSe2020/Aufgabe06/Bilder/Getränkbilder/Mineralwasser/wasser3.png", name: "Tolles Wasser", beschreibung: "Erfrischend Prickelnd", preis: 1.30, art: "wasser" };
     const artikel4 = { bild: "/gis_SoSe2020/Aufgabe06/Bilder/Getränkbilder/Mineralwasser/wasser4.png", name: "Wasserrrr", beschreibung: "Neu jetzt in Medium!", preis: 1.20, art: "wasser" };
     const artikel5 = { bild: "/gis_SoSe2020/Aufgabe06/Bilder/Getränkbilder/Mineralwasser/wasser5.jpg", name: "Waser", beschreibung: "MIt extra viel Kohlensäure", preis: 1.23, art: "wasser" };
-    const artikel6 = { bild: "/gis_SoSe2020/Aufgabe06/Bilder/Getränkbilder/Mineralwasser/wasser6.jpg", name: "Wasser", beschreibung: "Atmungsaktiv", preis: 1.20, art: "wasser" };
+    const artikel6 = { bild: "/gis_SoSe2020/Aufgabe06/Bilder/Getränkbilder/Mineralwasser/wasser6.jpg", name: "Wasser", beschreibung: "Superpreis", preis: 1.20, art: "wasser" };
     const artikel7 = { bild: "/gis_SoSe2020/Aufgabe06/Bilder/Getränkbilder/Mineralwasser/wasser7.jpg", name: "Wasser", beschreibung: "Nur vom besten", preis: 1.30, art: "wasser" };
     //Softdrink
     const artikel8 = { bild: "/gis_SoSe2020/Aufgabe06/Bilder/Getränkbilder/Softdrinks/softdrink1.jpg", name: "Softdrink1", beschreibung: "Mir gefällt besonders dies", preis: 1.20, art: "softdrink" };
