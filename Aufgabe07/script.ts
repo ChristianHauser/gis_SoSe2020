@@ -1,7 +1,10 @@
-namespace Aufgabe07 {
+namespace Aufgabe06 {
     
     let counterstart: number = 0;
     
+    const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
+
+   
 
     //Klasse Inhalt
     let divinhalt: HTMLElement = document.createElement("div");
@@ -98,6 +101,8 @@ namespace Aufgabe07 {
     let divElement: HTMLElement = document.createElement("div");
     divElement.setAttribute("id", "soft");
     softdrinktdiv.appendChild(divElement);
+    localStorage.setItem("softdrink", artikelArray[i].name);
+    (<HTMLElement>document.getElementById("soft")).innerHTML = localStorage.getItem("softdrink")!;
 
     let bildElement: HTMLElement = document.createElement("img");
     bildElement.setAttribute("src", artikelArray[i].bild);
@@ -141,11 +146,9 @@ namespace Aufgabe07 {
             counterstart++;
             counter.innerHTML = "" + counterstart;
             
-            
-            
-        
-            
         }
+         
+
 }
         
         
@@ -180,10 +183,33 @@ namespace Aufgabe07 {
              document.getElementById("wasserlink")!.setAttribute("style", "visibility: visible");
              document.getElementById("softdrinkt")!.setAttribute("style", "visibility: visible");
              document.getElementById("softdrinktlink")!.setAttribute("style", "visibility: visible");
-        }                
-        
-    
+        }  
+
+        let artikel: Artikel[] = [];
+        window.addEventListener("load", init);
+
+        function init(): void {
+            let url: string = "artikel.json";
+            communicate(url);
+        }
+ 
+
+        console.log(JSON.parse(artikel.json)[0].name);
+
+        async function communicate(_url: RequestInfo): Promise<void> {
+            let response: Response = await fetch(_url);
+            console.log("Response", response);
+            artikel = await response.json();
+            
+        }
+
+    // Item Speichern
+       // localStorage.setItem("lastname", "Smith");
+    // Item Laden
+       // (<HTMLElement>document.getElementById("test")).innerHTML = localStorage.getItem("lastname")!;
+
 //Gesamter Inhalt in main tag
+
         document.getElementById("main")?.appendChild(divinhalt);
 }}
 
