@@ -1,17 +1,17 @@
 async function communicate(_url: RequestInfo): Promise<void> {
   let response: Response = await fetch(_url);
+  let text: String = await response.text();
+  console.log("Response", text);
   
-  console.log("Response", response);
-  let text: (response): Promise<void>{
-    
-  } 
 }
-  
-function handleFailure(_response: Response): void {
-    console.log("Failure", _response);
-  }
-  
-function handleSuccess(_response: Response): void {
-    console.log("Success", _response);
-  }
-  
+
+async function penis(): Promise<void> {
+
+  console.log("vorher");
+  await communicate("https://hs-furtwangen.github.io/GIS-SoSe-2020/L07/test.txt");
+  console.log("nacher");
+
+}
+
+
+penis();
