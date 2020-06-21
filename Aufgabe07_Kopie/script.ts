@@ -1,5 +1,12 @@
 namespace Aufgabe08 {
-    
+
+    generateArtikle();
+    export async function generateArtikle(): Promise<void> {
+        await handleData("artikel.json");
+        machmeineseite();
+    }
+    let summe: number = 0;
+    let warenKorbArtikel: Artikel[] = [];
     let counterstart: number = 0;
     const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
 
@@ -29,28 +36,18 @@ namespace Aufgabe08 {
     softdrinktdiv.setAttribute("id", "softdrinkt");
     divinhalt.appendChild(softdrinktdiv);
 
-    let summe: number = 0;
-    async function communicate(_url: RequestInfo): Promise<void> {
-        let response: Response = await fetch(_url);
-        let text: String = await response.json();
-        console.log("Response", text);
-        
-      }
+    
+   
       
-    async function penis(): Promise<void> {
-      
-        console.log("vorher");
-        await communicate("https://hs-furtwangen.github.io/GIS-SoSe-2020/L07/testjson.json");
-        console.log("nacher");
-      
-      }
-      
-      
-    penis();
-      
+   
+   
     
     //Schleife die den array mit den Artikeln komplett durchgeht. 
+    function machmeineseite(): void {
     for (let i: number = 0; i < artikelArray.length; i++) {
+
+
+        
         
         if (artikelArray[i].art == "wasser") {
             //Jeder neue Artikel wird in Klasse artikel gespeichern
@@ -92,6 +89,8 @@ namespace Aufgabe08 {
         
         divElement.appendChild(buttonElement);
         buttonElement.addEventListener("click", wasserPreis);
+
+       
         
 
         function wasserPreis(_event: Event): void {
@@ -101,6 +100,9 @@ namespace Aufgabe08 {
             console.log("Gesamtsumme: " + summe + " €");
             counterstart++;
             counter.innerHTML = "" + counterstart;
+            warenKorbArtikel.push(artikelArray[i]);
+            
+
             
              }
              
@@ -116,6 +118,7 @@ namespace Aufgabe08 {
     let divElement: HTMLElement = document.createElement("div");
     divElement.setAttribute("id", "soft");
     softdrinktdiv.appendChild(divElement);
+    
 
     let bildElement: HTMLElement = document.createElement("img");
     bildElement.setAttribute("src", artikelArray[i].bild);
@@ -148,7 +151,7 @@ namespace Aufgabe08 {
     divElement.appendChild(buttonElement);
     buttonElement.addEventListener("click", softdrinkPreis);
 
-        
+    buttonElement.addEventListener ("click" , handleClickStorage);
 
     function softdrinkPreis(_event: Event): void {
 
@@ -165,7 +168,7 @@ namespace Aufgabe08 {
             
         }
 }
-        
+          
         
         document.getElementById("supertolleid")?.addEventListener("click", handleSoft);
 
@@ -175,6 +178,9 @@ namespace Aufgabe08 {
     document.getElementById("wasserlink")!.setAttribute("style", "display: none");
     document.getElementById("softdrinkt")!.setAttribute("style", "visibility: visible");
     document.getElementById("softdrinktlink")!.setAttribute("style", "visibility: visible");
+    
+
+    
 
 }
 
@@ -201,11 +207,26 @@ namespace Aufgabe08 {
         }                
         
         
+        function handleClickStorage(_event: Event ): void {
 
+            warenKorbArtikel.push(artikelArray[i]);
+            localStorage.setItem("artikel_name" + (warenKorbArtikel.length - 1), artikelArray[i].name);
+            localStorage.setItem("artikel_preis" + (warenKorbArtikel.length - 1), artikelArray[i].preis.toString());
+            localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), artikelArray[i].beschreibung);
+            localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), artikelArray[i].bild);
+            localStorage.setItem("anzahlArtikel", warenKorbArtikel.length.toString());
+            
+            console.log(localStorage);
+
+        }
+        
         
     
 //Gesamter Inhalt in main tag
         document.getElementById("main")?.appendChild(divinhalt);
+}
+
+
 }}
 
 
