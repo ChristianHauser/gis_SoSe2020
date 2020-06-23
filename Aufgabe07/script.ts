@@ -1,10 +1,15 @@
-namespace Aufgabe06 {
-    
-    let counterstart: number = 0;
-    
-    const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
+namespace Aufgabe07fertig {
 
-   
+    generateArtikle();
+    export async function generateArtikle(): Promise<void> {
+        await handleData("artikel.json");
+        machmeineseite();
+        
+    }
+    let summe: number = 0;
+    let warenKorbArtikel: Artikel[] = [];
+    let counterstart: number = 0;
+    const counter: HTMLElement = document.getElementById("counter") as HTMLDivElement;
 
     //Klasse Inhalt
     let divinhalt: HTMLElement = document.createElement("div");
@@ -32,16 +37,28 @@ namespace Aufgabe06 {
     softdrinktdiv.setAttribute("id", "softdrinkt");
     divinhalt.appendChild(softdrinktdiv);
 
-    let summe: number = 0;
+    
+   
+    
+    
+    
     
     //Schleife die den array mit den Artikeln komplett durchgeht. 
+    function machmeineseite(): void {
+        
+    console.log("hallo");
     for (let i: number = 0; i < artikelArray.length; i++) {
+
+
+        
         
         if (artikelArray[i].art == "wasser") {
             //Jeder neue Artikel wird in Klasse artikel gespeichern
         let divElement: HTMLElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         wasserdiv.appendChild(divElement);
+        
+        console.log("hallo");
 
         //Bild hinzufügen
         let bildElement: HTMLElement = document.createElement("img");
@@ -76,18 +93,12 @@ namespace Aufgabe06 {
         buttonElement.innerHTML = "Kaufen";
         
         divElement.appendChild(buttonElement);
-        buttonElement.addEventListener("click", wasserPreis);
+        buttonElement.addEventListener("click", handleClickStorage);
+
+       
         
 
-        function wasserPreis(_event: Event): void {
-            summe = summe + artikelArray[i].preis;
-            summe = summe * 1000;
-            summe = summe / 1000;
-            console.log("Gesamtsumme: " + summe + " €");
-            counterstart++;
-            counter.innerHTML = "" + counterstart;
-            
-             }
+        
              
        
     } else {
@@ -101,8 +112,7 @@ namespace Aufgabe06 {
     let divElement: HTMLElement = document.createElement("div");
     divElement.setAttribute("id", "soft");
     softdrinktdiv.appendChild(divElement);
-    localStorage.setItem("softdrink", artikelArray[i].name);
-    (<HTMLElement>document.getElementById("soft")).innerHTML = localStorage.getItem("softdrink")!;
+    
 
     let bildElement: HTMLElement = document.createElement("img");
     bildElement.setAttribute("src", artikelArray[i].bild);
@@ -132,25 +142,14 @@ namespace Aufgabe06 {
     buttonElement.innerHTML = "Kaufen";
     divElement.appendChild(buttonElement);
         
-    divElement.appendChild(buttonElement);
-    buttonElement.addEventListener("click", softdrinkPreis);
+    
+    buttonElement.addEventListener("click", handleClickStorage );
 
-        
+    
 
-    function softdrinkPreis(_event: Event): void {
-
-            summe = summe + artikelArray[i].preis;
-            summe = summe * 1000;
-            summe = summe / 1000;
-            console.log("Gesamtsumme=" + summe + "€");
-            counterstart++;
-            counter.innerHTML = "" + counterstart;
-            
-        }
-         
-
+    
 }
-        
+          
         
         document.getElementById("supertolleid")?.addEventListener("click", handleSoft);
 
@@ -160,6 +159,9 @@ namespace Aufgabe06 {
     document.getElementById("wasserlink")!.setAttribute("style", "display: none");
     document.getElementById("softdrinkt")!.setAttribute("style", "visibility: visible");
     document.getElementById("softdrinktlink")!.setAttribute("style", "visibility: visible");
+    
+
+    
 
 }
 
@@ -183,34 +185,36 @@ namespace Aufgabe06 {
              document.getElementById("wasserlink")!.setAttribute("style", "visibility: visible");
              document.getElementById("softdrinkt")!.setAttribute("style", "visibility: visible");
              document.getElementById("softdrinktlink")!.setAttribute("style", "visibility: visible");
-        }  
+        }                
+        
+        
+        function handleClickStorage(_event: Event ): void {
 
-        let artikel: Artikel[] = [];
-        window.addEventListener("load", init);
+            warenKorbArtikel.push(artikelArray[i]);
+            localStorage.setItem("artikel_name" + (warenKorbArtikel.length - 1), artikelArray[i].name);
+            localStorage.setItem("artikel_preis" + (warenKorbArtikel.length - 1), artikelArray[i].preis.toString());
+            localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), artikelArray[i].beschreibung);
+            localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), artikelArray[i].bild);
+            localStorage.setItem("anzahlArtikel", warenKorbArtikel.length.toString());
 
-        function init(): void {
-            let url: string = "artikel.json";
-            communicate(url);
-        }
- 
-
-        console.log(JSON.parse(artikel.json)[0].name);
-
-        async function communicate(_url: RequestInfo): Promise<void> {
-            let response: Response = await fetch(_url);
-            console.log("Response", response);
-            artikel = await response.json();
+            summe = summe + artikelArray[i].preis;
+            summe = summe * 1000;
+            summe = summe / 1000;
+            console.log("Gesamtsumme=" + summe + "€");
+            counterstart++;
+            counter.innerHTML = "" + counterstart;
             
+            console.log(localStorage);
+
         }
-
-    // Item Speichern
-       // localStorage.setItem("lastname", "Smith");
-    // Item Laden
-       // (<HTMLElement>document.getElementById("test")).innerHTML = localStorage.getItem("lastname")!;
-
+        
+        
+    
 //Gesamter Inhalt in main tag
-
         document.getElementById("main")?.appendChild(divinhalt);
+}
+
+
 }}
 
 

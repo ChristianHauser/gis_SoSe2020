@@ -61,6 +61,43 @@ img[alt="Getränke"]{
     
 }
 
+#clear {
+    float: left;
+    
+    padding: 10px;
+    color: white;
+    background-color: black;
+    
+
+
+}
+#clear p{
+    font-size: 40px;
+    margin: auto;
+    float: left;
+}
+
+#divID div{
+    background-color: black;
+}
+
+
+
+#warenkorbWert{
+    margin: auto;
+    display: inline-block;
+}
+
+#warenkorbWert p{
+
+    margin: auto;
+    background-color: black;
+    color: white;
+}
+#warenkorb{
+    text-align: center;
+}
+
 #hinterblock{
 
     padding: 20px;

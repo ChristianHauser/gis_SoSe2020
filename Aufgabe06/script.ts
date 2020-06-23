@@ -1,4 +1,4 @@
-namespace Aufgabe07 {
+namespace Aufgabe012 {
     
     let counterstart: number = 0;
     

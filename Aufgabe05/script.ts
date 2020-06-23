@@ -18,6 +18,8 @@ namespace Aufgabe05 {
     wasserdiv.setAttribute("class", "wasser");
     divinhalt.appendChild(wasserdiv);
 
+    console.log("hallo");
+
     let summe: number = 0;
     let zahler: number = 0;
     //Schleife die den array mit den Artikeln komplett durchgeht. 
@@ -137,14 +139,14 @@ namespace Aufgabe05 {
 
     }
 
-    function wasserPreis( _event: Event): void{
+    function wasserPreis( _event: Event): void {
 
         counterstart++;
         counter.innerHTML = "" + counterstart;
 
     }
 
-    function softdrinkPreis (_event: Event): void{
+    function softdrinkPreis (_event: Event): void {
 
         counterstart++;
         counter.innerHTML = "" + counterstart;

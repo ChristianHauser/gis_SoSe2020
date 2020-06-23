@@ -15,10 +15,10 @@ namespace Aufgabe08 {
     export let artikelArray: Artikel[] = [];
     export async function handleData(_url: RequestInfo): Promise<void> {
 
-        let resp1: Response = await fetch(_url);
-        let resp2: JSON = await resp1.json();
+        let re1: Response = await fetch(_url);
+        let re2: JSON = await re1.json();
         //Einlesen von artikelArray aus der json datei 
-        artikelArray = JSON.parse(JSON.stringify(resp2));
+        artikelArray = JSON.parse(JSON.stringify(re2));
 
     }
     export let jsonArtikelArray: String = JSON.stringify(artikelArray);

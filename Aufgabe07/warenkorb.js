@@ -3,42 +3,37 @@ var Aufgabe08;
 (function (Aufgabe08) {
     let summe = 0;
     let psumme = document.createElement("p");
-    let countTo = parseInt(localStorage.getItem("anzahlArtikel"));
+    let anzahlArtikel = parseInt(localStorage.getItem("anzahlArtikel"));
     createWarenkorbArtikel();
     function createWarenkorbArtikel() {
-        for (let i = 0; i <= countTo - 1; i++) {
+        for (let i = 0; i <= anzahlArtikel - 1; i++) {
             let newDiv = document.createElement("div");
             document.getElementById("warenkorb").appendChild(newDiv);
             newDiv.id = "divId" + i;
-            console.log("divId" + i);
             //IMG IN DIV PACKEN
             let imgElement = document.createElement("img");
             imgElement.src = localStorage.getItem("artikel_bild" + i);
             newDiv.appendChild(imgElement);
-            console.log(imgElement);
             let name = document.createElement("h1");
             name.innerHTML = localStorage.getItem("artikel_name" + i);
             newDiv.appendChild(name);
-            let desc = document.createElement("p");
-            desc.innerHTML = localStorage.getItem("artikel_beschreibung" + i);
-            newDiv.appendChild(desc);
             //PREIS
-            let price = document.createElement("p");
-            price.innerHTML = localStorage.getItem("artikel_preis" + i);
-            newDiv.setAttribute("preis", price.innerHTML);
-            newDiv.appendChild(price);
+            let preiss = document.createElement("p");
+            preiss.innerHTML = localStorage.getItem("artikel_preis" + i);
+            newDiv.setAttribute("preis", preiss.innerHTML);
+            newDiv.appendChild(preiss);
             //BUTTON
             let kaufen = document.createElement("button");
             kaufen.innerHTML = "Löschen";
             newDiv.appendChild(kaufen);
-            kaufen.addEventListener("click", handleRemoveArticle);
+            kaufen.addEventListener("click", handleRemoveArtikel);
             //summe berechnen
-            summe = summe + parseFloat(price.innerHTML);
+            summe = summe + parseFloat(preiss.innerHTML);
             psumme.innerHTML = summe.toFixed(2) + "€";
             setsumme();
         }
-        function handleRemoveArticle(_event) {
-            //Gesampreis reduzieren
+        function handleRemoveArtikel(_event) {
+            //Den Preis verringern
             let preisString = _event.currentTarget.parentElement.getAttribute("preis");
             summe = summe - parseFloat(preisString);
             psumme.innerHTML = summe.toFixed(2) + "€";
@@ -46,30 +41,28 @@ var Aufgabe08;
             //Artikel Löschen
             (_event.currentTarget.parentElement).remove();
         }
-        removeAll();
+        Clear();
     }
     //summe in Header plazieren
     function setsumme() {
         document.getElementById("warenkorbWert")?.appendChild(psumme);
     }
-    function removeAll() {
-        let remButton = document.getElementById("liRemoveAll");
-        remButton.addEventListener("click", handleRemoveAll);
+    function Clear() {
+        let remButton = document.getElementById("clear");
+        remButton.addEventListener("click", handleClear);
     }
-    function handleRemoveAll(_event) {
-        for (let index = 0; index <= countTo - 1; index++) {
+    function handleClear(_event) {
+        for (let i = 0; i <= anzahlArtikel - 1; i++) {
             try {
-                document.getElementById("divId" + index).remove();
+                document.getElementById("divId" + i).remove();
             }
             catch (error) {
                 console.log(error);
-                console.log("Artikel wurde zuvor von Hand gelöscht und kann nicht mehr gefunden werden");
             }
-            psumme.innerHTML = 0 + "€";
+            psumme.innerHTML = 0 + ".00€";
             setsumme();
             localStorage.clear();
         }
     }
-    console.log(localStorage);
 })(Aufgabe08 || (Aufgabe08 = {}));
 //# sourceMappingURL=warenkorb.js.map

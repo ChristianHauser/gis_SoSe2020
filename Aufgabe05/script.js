@@ -15,6 +15,7 @@ var Aufgabe05;
     let wasserdiv = document.createElement("div");
     wasserdiv.setAttribute("class", "wasser");
     divinhalt.appendChild(wasserdiv);
+    console.log("hallo");
     let summe = 0;
     let zahler = 0;
     //Schleife die den array mit den Artikeln komplett durchgeht. 

@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe07;
-(function (Aufgabe07) {
+var Aufgabe012;
+(function (Aufgabe012) {
     let counterstart = 0;
     //Klasse Inhalt
     let divinhalt = document.createElement("div");
@@ -25,28 +25,28 @@ var Aufgabe07;
     divinhalt.appendChild(softdrinktdiv);
     let summe = 0;
     //Schleife die den array mit den Artikeln komplett durchgeht. 
-    for (let i = 0; i < Aufgabe07.artikelArray.length; i++) {
-        if (Aufgabe07.artikelArray[i].art == "wasser") {
+    for (let i = 0; i < artikelArray.length; i++) {
+        if (artikelArray[i].art == "wasser") {
             //Jeder neue Artikel wird in Klasse artikel gespeichern
             let divElement = document.createElement("div");
             divElement.setAttribute("class", "artikel");
             wasserdiv.appendChild(divElement);
             //Bild hinzufügen
             let bildElement = document.createElement("img");
-            bildElement.setAttribute("src", Aufgabe07.artikelArray[i].bild);
+            bildElement.setAttribute("src", artikelArray[i].bild);
             divElement.appendChild(bildElement);
             //Titel hinzufügen
             let titelElement = document.createElement("h3");
             divElement.appendChild(titelElement);
-            titelElement.innerHTML = Aufgabe07.artikelArray[i].name;
+            titelElement.innerHTML = artikelArray[i].name;
             //Beschreibung hinzufügen
             let beschreibungelement = document.createElement("p");
             divElement.appendChild(beschreibungelement);
-            beschreibungelement.innerHTML = Aufgabe07.artikelArray[i].beschreibung;
+            beschreibungelement.innerHTML = artikelArray[i].beschreibung;
             //Preis hinzufügen
             let preiselement = document.createElement("i");
             divElement.appendChild(preiselement);
-            preiselement.innerHTML = Aufgabe07.artikelArray[i].preis.toString() + "€";
+            preiselement.innerHTML = artikelArray[i].preis.toString() + "€";
             //Br tags
             let brelement = document.createElement("br");
             divElement.appendChild(brelement);
@@ -58,7 +58,7 @@ var Aufgabe07;
             divElement.appendChild(buttonElement);
             buttonElement.addEventListener("click", wasserPreis);
             function wasserPreis(_event) {
-                summe = summe + Aufgabe07.artikelArray[i].preis;
+                summe = summe + artikelArray[i].preis;
                 summe = summe * 1000;
                 summe = summe / 1000;
                 console.log("Gesamtsumme: " + summe + " €");
@@ -72,17 +72,17 @@ var Aufgabe07;
             divElement.setAttribute("id", "soft");
             softdrinktdiv.appendChild(divElement);
             let bildElement = document.createElement("img");
-            bildElement.setAttribute("src", Aufgabe07.artikelArray[i].bild);
+            bildElement.setAttribute("src", artikelArray[i].bild);
             divElement.appendChild(bildElement);
             let titelElement = document.createElement("h3");
             divElement.appendChild(titelElement);
-            titelElement.innerHTML = Aufgabe07.artikelArray[i].name;
+            titelElement.innerHTML = artikelArray[i].name;
             let beschreibungelement = document.createElement("p");
             divElement.appendChild(beschreibungelement);
-            beschreibungelement.innerHTML = Aufgabe07.artikelArray[i].beschreibung;
+            beschreibungelement.innerHTML = artikelArray[i].beschreibung;
             let preiselement = document.createElement("i");
             divElement.appendChild(preiselement);
-            preiselement.innerHTML = Aufgabe07.artikelArray[i].preis.toString() + "€";
+            preiselement.innerHTML = artikelArray[i].preis.toString() + "€";
             let brelement = document.createElement("br");
             divElement.appendChild(brelement);
             let brelement2 = document.createElement("br");
@@ -93,7 +93,7 @@ var Aufgabe07;
             divElement.appendChild(buttonElement);
             buttonElement.addEventListener("click", softdrinkPreis);
             function softdrinkPreis(_event) {
-                summe = summe + Aufgabe07.artikelArray[i].preis;
+                summe = summe + artikelArray[i].preis;
                 summe = summe * 1000;
                 summe = summe / 1000;
                 console.log("Gesamtsumme=" + summe + "€");
@@ -128,5 +128,5 @@ var Aufgabe07;
         //Gesamter Inhalt in main tag
         document.getElementById("main")?.appendChild(divinhalt);
     }
-})(Aufgabe07 || (Aufgabe07 = {}));
+})(Aufgabe012 || (Aufgabe012 = {}));
 //# sourceMappingURL=script.js.map

@@ -1,53 +1,48 @@
-namespace Aufgabe08 {
+namespace Aufgabe07fertig {
 
     let summe: number = 0;
     let psumme: HTMLParagraphElement = document.createElement("p");
-    let countTo: number = parseInt(localStorage.getItem("anzahlArtikel")!);
+    let anzahlArtikel: number = parseInt(localStorage.getItem("anzahlArtikel")!);
 
     createWarenkorbArtikel();
     function createWarenkorbArtikel(): void {
-        for (let i: number = 0; i <= countTo - 1; i++) {
+        for (let i: number = 0; i <= anzahlArtikel - 1; i++) {
 
             let newDiv: HTMLElement = document.createElement("div");
             (<HTMLElement>document.getElementById("warenkorb")).appendChild(newDiv);
             newDiv.id = "divId" + i;
-            console.log("divId" + i);
-
+            
             //IMG IN DIV PACKEN
             let imgElement: HTMLImageElement = document.createElement("img");
             imgElement.src = localStorage.getItem("artikel_bild" + i)!;
             newDiv.appendChild(imgElement);
-            console.log(imgElement);
+            
 
             let name: HTMLParagraphElement = document.createElement("h1");
             name.innerHTML = localStorage.getItem("artikel_name" + i)!;
             newDiv.appendChild(name);
 
-            let desc: HTMLParagraphElement = document.createElement("p");
-            desc.innerHTML = localStorage.getItem("artikel_beschreibung" + i)!;
-            newDiv.appendChild(desc);
-
              //PREIS
-            let price: HTMLParagraphElement = document.createElement("p");
-            price.innerHTML = localStorage.getItem("artikel_preis" + i)!;
-            newDiv.setAttribute("preis", price.innerHTML);
-            newDiv.appendChild(price);
+            let preiss: HTMLParagraphElement = document.createElement("p");
+            preiss.innerHTML = localStorage.getItem("artikel_preis" + i)!;
+            newDiv.setAttribute("preis", preiss.innerHTML);
+            newDiv.appendChild(preiss);
 
             //BUTTON
             let kaufen: HTMLButtonElement = document.createElement("button");
             kaufen.innerHTML = "Löschen";
             newDiv.appendChild(kaufen);
-            kaufen.addEventListener("click", handleRemoveArticle);
+            kaufen.addEventListener("click", handleRemoveArtikel);
 
             //summe berechnen
-            summe = summe + parseFloat(price.innerHTML);
+            summe = summe + parseFloat(preiss.innerHTML);
             psumme.innerHTML = summe.toFixed(2) + "€";
-            setsumme();
-            
+            setsumme();    
         }
         
-        function handleRemoveArticle(_event: Event): void {
-            //Gesampreis reduzieren
+        function handleRemoveArtikel(_event: Event): void {
+
+            //Den Preis verringern
             let preisString: string = (<HTMLParagraphElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("preis")!;
             summe = summe - parseFloat(preisString);
             psumme.innerHTML = summe.toFixed(2) + "€";
@@ -56,34 +51,33 @@ namespace Aufgabe08 {
             //Artikel Löschen
             ((<HTMLDivElement>_event.currentTarget).parentElement!).remove();
         }
-        removeAll();
+        Clear();
     }
-
+    
     //summe in Header plazieren
     function setsumme(): void {
         document.getElementById("warenkorbWert")?.appendChild(psumme);
     }
     
-    function removeAll(): void {
-        let remButton: HTMLDListElement = (<HTMLDListElement>document.getElementById("liRemoveAll"));
-        remButton.addEventListener("click", handleRemoveAll);
+    function Clear(): void {
+        let remButton: HTMLParagraphElement = (<HTMLParagraphElement>document.getElementById("clear"));
+        remButton.addEventListener("click", handleClear);
     }
 
-    function handleRemoveAll(_event: Event): void {
-            for (let index: number = 0; index <= countTo - 1; index++) {
+    function handleClear(_event: Event): void {
+            for (let i: number = 0; i <= anzahlArtikel - 1; i++) {
                 try {
-                    (<HTMLDivElement>document.getElementById("divId" + index)).remove();
+                    (<HTMLDivElement>document.getElementById("divId" + i)).remove();
                 } catch (error) {
-                    console.log(error);
-                    console.log("Artikel wurde zuvor von Hand gelöscht und kann nicht mehr gefunden werden");
+                    console.log(error);                    
                 }
-                psumme.innerHTML = 0 + "€";
+                psumme.innerHTML = 0 + ".00€";
                 setsumme();
                 localStorage.clear();
             }
     }
 
-    console.log(localStorage);
+    
 }
         
 

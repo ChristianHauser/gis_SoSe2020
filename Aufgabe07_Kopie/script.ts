@@ -4,6 +4,7 @@ namespace Aufgabe08 {
     export async function generateArtikle(): Promise<void> {
         await handleData("artikel.json");
         machmeineseite();
+        
     }
     let summe: number = 0;
     let warenKorbArtikel: Artikel[] = [];
@@ -38,12 +39,14 @@ namespace Aufgabe08 {
 
     
    
-      
-   
-   
+    
+    
+    
     
     //Schleife die den array mit den Artikeln komplett durchgeht. 
     function machmeineseite(): void {
+        
+    console.log("hallo");
     for (let i: number = 0; i < artikelArray.length; i++) {
 
 
@@ -54,6 +57,8 @@ namespace Aufgabe08 {
         let divElement: HTMLElement = document.createElement("div");
         divElement.setAttribute("class", "artikel");
         wasserdiv.appendChild(divElement);
+        
+        console.log("hallo");
 
         //Bild hinzufügen
         let bildElement: HTMLElement = document.createElement("img");
@@ -88,23 +93,12 @@ namespace Aufgabe08 {
         buttonElement.innerHTML = "Kaufen";
         
         divElement.appendChild(buttonElement);
-        buttonElement.addEventListener("click", wasserPreis);
+        buttonElement.addEventListener("click", handleClickStorage);
 
        
         
 
-        function wasserPreis(_event: Event): void {
-            summe = summe + artikelArray[i].preis;
-            summe = summe * 1000;
-            summe = summe / 1000;
-            console.log("Gesamtsumme: " + summe + " €");
-            counterstart++;
-            counter.innerHTML = "" + counterstart;
-            warenKorbArtikel.push(artikelArray[i]);
-            
-
-            
-             }
+        
              
        
     } else {
@@ -148,25 +142,12 @@ namespace Aufgabe08 {
     buttonElement.innerHTML = "Kaufen";
     divElement.appendChild(buttonElement);
         
-    divElement.appendChild(buttonElement);
-    buttonElement.addEventListener("click", softdrinkPreis);
+    
+    buttonElement.addEventListener("click", handleClickStorage );
 
-    buttonElement.addEventListener ("click" , handleClickStorage);
+    
 
-    function softdrinkPreis(_event: Event): void {
-
-            summe = summe + artikelArray[i].preis;
-            summe = summe * 1000;
-            summe = summe / 1000;
-            console.log("Gesamtsumme=" + summe + "€");
-            counterstart++;
-            counter.innerHTML = "" + counterstart;
-            
-            
-            
-        
-            
-        }
+    
 }
           
         
@@ -215,6 +196,13 @@ namespace Aufgabe08 {
             localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), artikelArray[i].beschreibung);
             localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), artikelArray[i].bild);
             localStorage.setItem("anzahlArtikel", warenKorbArtikel.length.toString());
+
+            summe = summe + artikelArray[i].preis;
+            summe = summe * 1000;
+            summe = summe / 1000;
+            console.log("Gesamtsumme=" + summe + "€");
+            counterstart++;
+            counter.innerHTML = "" + counterstart;
             
             console.log(localStorage);
 
