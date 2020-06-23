@@ -1,17 +1,19 @@
 "use strict";
-var Aufgabe08;
-(function (Aufgabe08) {
-    let formData;
-    let abschicken = document.getElementById("abschicken");
-    abschicken.addEventListener("click", abschickenklick);
-    async function abschickenklick() {
-        formData = new FormData(document.forms[0]);
-        let url = "https://gissommersemester2020.herokuapp.com/";
-        let urlquery = new URLSearchParams(formData);
-        url = url + "?" + urlquery.toString();
-        let antwort = await fetch(url);
-        let antworttext = await antwort.text();
-        console.log(antworttext);
+var AufgabeAcht;
+(function (AufgabeAcht) {
+    let button = document.getElementById("button");
+    button.addEventListener("click", handleClick);
+    function handleClick() {
+        let formData = new FormData(document.forms[0]);
+        let url = "https://gissose2020chris.herokuapp.com";
+        let query = new URLSearchParams(formData);
+        url = url + "?" + query.toString();
+        communicate(url);
     }
-})(Aufgabe08 || (Aufgabe08 = {}));
+    async function communicate(_url) {
+        let response = await fetch(_url);
+        let responseText = await response.text();
+        console.log(responseText);
+    }
+})(AufgabeAcht || (AufgabeAcht = {}));
 //# sourceMappingURL=typescript.js.map

@@ -1,8 +1,8 @@
 namespace AufgabeAcht {
   
 
-let senden: HTMLButtonElement = <HTMLButtonElement> document.getElementById("button");
-senden.addEventListener("click", handleClick);
+let button: HTMLButtonElement = <HTMLButtonElement> document.getElementById("button");
+button.addEventListener("click", handleClick);
 
 function handleClick(): void {
 
