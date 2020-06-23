@@ -1,4 +1,4 @@
-namespace AufgabeAcht {
+namespace Aufgabe08 {
   
 
 let button: HTMLButtonElement = <HTMLButtonElement> document.getElementById("button");

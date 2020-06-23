@@ -1,6 +1,6 @@
 "use strict";
-var AufgabeAcht;
-(function (AufgabeAcht) {
+var Aufgabe08;
+(function (Aufgabe08) {
     let button = document.getElementById("button");
     button.addEventListener("click", handleClick);
     function handleClick() {
@@ -15,5 +15,5 @@ var AufgabeAcht;
         let responseText = await response.text();
         console.log(responseText);
     }
-})(AufgabeAcht || (AufgabeAcht = {}));
+})(Aufgabe08 || (Aufgabe08 = {}));
 //# sourceMappingURL=typescript.js.map
