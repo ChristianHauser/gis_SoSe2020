@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.AufgabeAcht = void 0;
+exports.Aufgabe08 = void 0;
 const Http = require("http");
-var AufgabeAcht;
-(function (AufgabeAcht) {
+var Aufgabe08;
+(function (Aufgabe08) {
     console.log("Starting server");
     //Port Number wird unter port gespeichert
     let port = Number(process.env.PORT);
@@ -26,5 +26,5 @@ var AufgabeAcht;
         _response.write(_request.url);
         _response.end();
     }
-})(AufgabeAcht = exports.AufgabeAcht || (exports.AufgabeAcht = {}));
+})(Aufgabe08 = exports.Aufgabe08 || (exports.Aufgabe08 = {}));
 //# sourceMappingURL=server.js.map

@@ -1,5 +1,5 @@
 import * as Http from "http";
-export namespace AufgabeAcht {
+export namespace Aufgabe08 {
 
 
       console.log("Starting server");
