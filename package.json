@@ -8,7 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node gis_SoSe2020/Aufgabe08/server.js"
+    "start": "node Aufgabe08/server.js"
   },
   "repository": {
     "type": "git",
