@@ -37,21 +37,11 @@ namespace Aufgabe07fertig {
     softdrinktdiv.setAttribute("id", "softdrinkt");
     divinhalt.appendChild(softdrinktdiv);
 
-    
-   
-    
-    
-    
-    
-    //Schleife die den array mit den Artikeln komplett durchgeht. 
+     //Schleife die den array mit den Artikeln komplett durchgeht. 
     function machmeineseite(): void {
         
     console.log("hallo");
     for (let i: number = 0; i < artikelArray.length; i++) {
-
-
-        
-        
         if (artikelArray[i].art == "wasser") {
             //Jeder neue Artikel wird in Klasse artikel gespeichern
         let divElement: HTMLElement = document.createElement("div");
@@ -95,20 +85,9 @@ namespace Aufgabe07fertig {
         divElement.appendChild(buttonElement);
         buttonElement.addEventListener("click", handleClickStorage);
 
-       
-        
-
-        
-             
-       
-    } else {
-        
-   
-
-
+       } else {
     //Wiederholung der Schritte
     
-
     let divElement: HTMLElement = document.createElement("div");
     divElement.setAttribute("id", "soft");
     softdrinktdiv.appendChild(divElement);
@@ -128,10 +107,8 @@ namespace Aufgabe07fertig {
 
     let preiselement: HTMLElement = document.createElement("i");
     divElement.appendChild(preiselement);
-        
     preiselement.innerHTML = artikelArray[i].preis.toString() + "€";
 
-        
     let brelement: HTMLElement = document.createElement("br");
     divElement.appendChild(brelement);
 
@@ -141,28 +118,18 @@ namespace Aufgabe07fertig {
     let buttonElement: HTMLElement = document.createElement("button");
     buttonElement.innerHTML = "Kaufen";
     divElement.appendChild(buttonElement);
-        
-    
     buttonElement.addEventListener("click", handleClickStorage );
-
-    
-
-    
 }
           
         
         document.getElementById("supertolleid")?.addEventListener("click", handleSoft);
 
         function handleSoft(_event: Event): void {
-    console.log("hallo");
-    document.getElementById("wasser")!.setAttribute("style", "display: none");
-    document.getElementById("wasserlink")!.setAttribute("style", "display: none");
-    document.getElementById("softdrinkt")!.setAttribute("style", "visibility: visible");
-    document.getElementById("softdrinktlink")!.setAttribute("style", "visibility: visible");
-    
-
-    
-
+        console.log("hallo");
+        document.getElementById("wasser")!.setAttribute("style", "display: none");
+        document.getElementById("wasserlink")!.setAttribute("style", "display: none");
+        document.getElementById("softdrinkt")!.setAttribute("style", "visibility: visible");
+        document.getElementById("softdrinktlink")!.setAttribute("style", "visibility: visible");
 }
 
         document.getElementById("wassertolleid")?.addEventListener("click", handleWasser);
@@ -207,9 +174,6 @@ namespace Aufgabe07fertig {
             console.log(localStorage);
 
         }
-        
-        
-    
 //Gesamter Inhalt in main tag
         document.getElementById("main")?.appendChild(divinhalt);
 }

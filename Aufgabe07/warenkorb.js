@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe08;
-(function (Aufgabe08) {
+var Aufgabe07fertig;
+(function (Aufgabe07fertig) {
     let summe = 0;
     let psumme = document.createElement("p");
     let anzahlArtikel = parseInt(localStorage.getItem("anzahlArtikel"));
@@ -64,5 +64,5 @@ var Aufgabe08;
             localStorage.clear();
         }
     }
-})(Aufgabe08 || (Aufgabe08 = {}));
+})(Aufgabe07fertig || (Aufgabe07fertig = {}));
 //# sourceMappingURL=warenkorb.js.map

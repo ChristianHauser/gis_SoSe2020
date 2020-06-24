@@ -8,9 +8,6 @@ namespace Aufgabe07fertig {
         art: string;
         
     }
-
-   
-
     //In array speichern
     export let artikelArray: Artikel[] = [];
     export async function handleData(_url: RequestInfo): Promise<void> {

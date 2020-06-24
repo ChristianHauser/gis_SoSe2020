@@ -1,12 +1,12 @@
 "use strict";
-var Aufgabe07fertig;
-(function (Aufgabe07fertig) {
+var Aufgabe08;
+(function (Aufgabe08) {
     generateArtikle();
     async function generateArtikle() {
-        await Aufgabe07fertig.handleData("artikel.json");
+        await Aufgabe08.handleData("artikel.json");
         machmeineseite();
     }
-    Aufgabe07fertig.generateArtikle = generateArtikle;
+    Aufgabe08.generateArtikle = generateArtikle;
     let summe = 0;
     let warenKorbArtikel = [];
     let counterstart = 0;
@@ -35,8 +35,8 @@ var Aufgabe07fertig;
     //Schleife die den array mit den Artikeln komplett durchgeht. 
     function machmeineseite() {
         console.log("hallo");
-        for (let i = 0; i < Aufgabe07fertig.artikelArray.length; i++) {
-            if (Aufgabe07fertig.artikelArray[i].art == "wasser") {
+        for (let i = 0; i < Aufgabe08.artikelArray.length; i++) {
+            if (Aufgabe08.artikelArray[i].art == "wasser") {
                 //Jeder neue Artikel wird in Klasse artikel gespeichern
                 let divElement = document.createElement("div");
                 divElement.setAttribute("class", "artikel");
@@ -44,20 +44,20 @@ var Aufgabe07fertig;
                 console.log("hallo");
                 //Bild hinzufügen
                 let bildElement = document.createElement("img");
-                bildElement.setAttribute("src", Aufgabe07fertig.artikelArray[i].bild);
+                bildElement.setAttribute("src", Aufgabe08.artikelArray[i].bild);
                 divElement.appendChild(bildElement);
                 //Titel hinzufügen
                 let titelElement = document.createElement("h3");
                 divElement.appendChild(titelElement);
-                titelElement.innerHTML = Aufgabe07fertig.artikelArray[i].name;
+                titelElement.innerHTML = Aufgabe08.artikelArray[i].name;
                 //Beschreibung hinzufügen
                 let beschreibungelement = document.createElement("p");
                 divElement.appendChild(beschreibungelement);
-                beschreibungelement.innerHTML = Aufgabe07fertig.artikelArray[i].beschreibung;
+                beschreibungelement.innerHTML = Aufgabe08.artikelArray[i].beschreibung;
                 //Preis hinzufügen
                 let preiselement = document.createElement("i");
                 divElement.appendChild(preiselement);
-                preiselement.innerHTML = Aufgabe07fertig.artikelArray[i].preis.toString() + "€";
+                preiselement.innerHTML = Aufgabe08.artikelArray[i].preis.toString() + "€";
                 //Br tags
                 let brelement = document.createElement("br");
                 divElement.appendChild(brelement);
@@ -75,17 +75,17 @@ var Aufgabe07fertig;
                 divElement.setAttribute("id", "soft");
                 softdrinktdiv.appendChild(divElement);
                 let bildElement = document.createElement("img");
-                bildElement.setAttribute("src", Aufgabe07fertig.artikelArray[i].bild);
+                bildElement.setAttribute("src", Aufgabe08.artikelArray[i].bild);
                 divElement.appendChild(bildElement);
                 let titelElement = document.createElement("h3");
                 divElement.appendChild(titelElement);
-                titelElement.innerHTML = Aufgabe07fertig.artikelArray[i].name;
+                titelElement.innerHTML = Aufgabe08.artikelArray[i].name;
                 let beschreibungelement = document.createElement("p");
                 divElement.appendChild(beschreibungelement);
-                beschreibungelement.innerHTML = Aufgabe07fertig.artikelArray[i].beschreibung;
+                beschreibungelement.innerHTML = Aufgabe08.artikelArray[i].beschreibung;
                 let preiselement = document.createElement("i");
                 divElement.appendChild(preiselement);
-                preiselement.innerHTML = Aufgabe07fertig.artikelArray[i].preis.toString() + "€";
+                preiselement.innerHTML = Aufgabe08.artikelArray[i].preis.toString() + "€";
                 let brelement = document.createElement("br");
                 divElement.appendChild(brelement);
                 let brelement2 = document.createElement("br");
@@ -120,13 +120,13 @@ var Aufgabe07fertig;
                 document.getElementById("softdrinktlink").setAttribute("style", "visibility: visible");
             }
             function handleClickStorage(_event) {
-                warenKorbArtikel.push(Aufgabe07fertig.artikelArray[i]);
-                localStorage.setItem("artikel_name" + (warenKorbArtikel.length - 1), Aufgabe07fertig.artikelArray[i].name);
-                localStorage.setItem("artikel_preis" + (warenKorbArtikel.length - 1), Aufgabe07fertig.artikelArray[i].preis.toString());
-                localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), Aufgabe07fertig.artikelArray[i].beschreibung);
-                localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), Aufgabe07fertig.artikelArray[i].bild);
+                warenKorbArtikel.push(Aufgabe08.artikelArray[i]);
+                localStorage.setItem("artikel_name" + (warenKorbArtikel.length - 1), Aufgabe08.artikelArray[i].name);
+                localStorage.setItem("artikel_preis" + (warenKorbArtikel.length - 1), Aufgabe08.artikelArray[i].preis.toString());
+                localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), Aufgabe08.artikelArray[i].beschreibung);
+                localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), Aufgabe08.artikelArray[i].bild);
                 localStorage.setItem("anzahlArtikel", warenKorbArtikel.length.toString());
-                summe = summe + Aufgabe07fertig.artikelArray[i].preis;
+                summe = summe + Aufgabe08.artikelArray[i].preis;
                 summe = summe * 1000;
                 summe = summe / 1000;
                 console.log("Gesamtsumme=" + summe + "€");
@@ -138,5 +138,5 @@ var Aufgabe07fertig;
             document.getElementById("main")?.appendChild(divinhalt);
         }
     }
-})(Aufgabe07fertig || (Aufgabe07fertig = {}));
+})(Aufgabe08 || (Aufgabe08 = {}));
 //# sourceMappingURL=script.js.map
