@@ -3,7 +3,7 @@ import * as Url from "url";
 
 export namespace Aufgabe09 {
 
-
+      console.log("funktionier")
       console.log("Starting server");
       //Port Number wird unter port gespeichert
       let port: number = Number(process.env.PORT);
