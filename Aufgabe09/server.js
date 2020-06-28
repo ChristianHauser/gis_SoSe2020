@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Aufgabe09 = void 0;
 const Http = require("http");
+const Url = require("url");
 var Aufgabe09;
 (function (Aufgabe09) {
     console.log("Starting server");
@@ -23,7 +24,19 @@ var Aufgabe09;
         console.log("I hear voices!");
         _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        _response.write(_request.url);
+        if (_request.url) {
+            let url = Url.parse(_request.url, true);
+            let pfad = url.pathname;
+            if (pfad == "/html") {
+                for (let key in url.query) {
+                    _response.write(key + ": " + url.query[key] + "<br>");
+                }
+            }
+            else if (pfad == "/json") {
+                let jsonString = JSON.stringify(url.query);
+                _response.write(jsonString);
+            }
+        }
         _response.end();
     }
 })(Aufgabe09 = exports.Aufgabe09 || (exports.Aufgabe09 = {}));
