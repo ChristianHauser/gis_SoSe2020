@@ -28,5 +28,5 @@ var Aufgabe9;
             console.log("Objekt: " + entry[0] + " Wert:" + entry[1]);
         }
     }
-})(Aufgabe9 || (Aufgabe9 = {}));
+})(Aufgabe09 || (Aufgabe09 = {}));
 //# sourceMappingURL=typescript.js.map
