@@ -1,7 +1,7 @@
 import * as Http from "http";
 import * as Url from "url";
 
-export namespace Aufgabe09 {
+export namespace Aufgabe10{
 
 
       console.log("Starting server");
