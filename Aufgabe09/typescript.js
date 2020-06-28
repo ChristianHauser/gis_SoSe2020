@@ -1,13 +1,12 @@
 "use strict";
-var Aufgabe9;
-(function (Aufgabe9) {
+var Aufgabe09;
+(function (Aufgabe09) {
     let buttonhtml = document.getElementById("button1");
-    buttonhtml.addEventListener("click", buttonclickhtml);
+    buttonhtml.addEventListener("click", handleHTML);
     let buttonjson = document.getElementById("button2");
-    buttonjson.addEventListener("click", buttonclickjson);
-    async function buttonclickhtml() {
+    buttonjson.addEventListener("click", handleJSON);
+    async function handleHTML() {
         let formData = new FormData(document.forms[0]);
-        //let url: string = "http://localhost:8100";
         let url = "https://gissose2020chris.herokuapp.com";
         let query = new URLSearchParams(formData);
         url = url + "/html" + "?" + query.toString();
@@ -16,9 +15,8 @@ var Aufgabe9;
         let serverResponse = document.getElementById("anzeige");
         serverResponse.innerHTML = responseString;
     }
-    async function buttonclickjson() {
+    async function handleJSON() {
         let formData = new FormData(document.forms[0]);
-        //let url: string = "http://localhost:8100";
         let url = "https://gissose2020chris.herokuapp.com";
         let query = new URLSearchParams(formData);
         url = url + "/json" + "?" + query.toString();

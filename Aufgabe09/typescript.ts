@@ -1,4 +1,4 @@
-namespace Aufgabe10 {
+namespace Aufgabe09 {
 
     let buttonhtml: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button1");
     buttonhtml.addEventListener("click", handleHTML);
