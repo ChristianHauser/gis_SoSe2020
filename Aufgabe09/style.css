@@ -1,0 +1,30 @@
+.formular{
+    
+    border: black 1px solid;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(223, 251, 255);
+    max-width: 500px;
+}
+
+#button1{
+    background-color: red;
+    color: white;
+    margin: 10px;
+}
+
+#button2{
+
+    background: blue;
+    color: white;
+    margin: 10px;
+}
+
+#text{ 
+    font-size: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#align{
+
+    text-align: center;
+}

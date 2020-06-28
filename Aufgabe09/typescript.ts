@@ -1,14 +1,14 @@
 namespace Aufgabe9 {
     let buttonhtml: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button1");
-    buttonhtml.addEventListener("click", buttonclickhtml);
+    buttonhtml.addEventListener("click", handleHTML);
 
     let buttonjson: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button2");
-    buttonjson.addEventListener("click", buttonclickjson);
+    buttonjson.addEventListener("click", handleJSON);
 
 
-    async function buttonclickhtml(): Promise<void> {
+    async function handleHTML(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
-        //let url: string = "http://localhost:8100";
+        
         let url: string = "https://gissose2020chris.herokuapp.com";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/html" + "?" + query.toString();
@@ -20,10 +20,10 @@ namespace Aufgabe9 {
     }
 
 
-    async function buttonclickjson(): Promise<void> {
+    async function handleJSON(): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
         
-        //let url: string = "http://localhost:8100";
+        
         let url: string = "https://gissose2020chris.herokuapp.com";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/json" + "?" + query.toString();
