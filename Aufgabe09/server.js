@@ -5,6 +5,7 @@ const Http = require("http");
 const Url = require("url");
 var Aufgabe09;
 (function (Aufgabe09) {
+    console.log("funktionier");
     console.log("Starting server");
     //Port Number wird unter port gespeichert
     let port = Number(process.env.PORT);
