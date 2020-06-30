@@ -28,10 +28,9 @@ namespace Aufgabe09 {
         let url: string = "https://gissose2020chris.herokuapp.com";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/json" + "?" + query.toString();
-        await fetch(url);
-        for (let entry of query) {
-            console.log(entry);
-            console.log("Objekt: " + entry[0] + " Wert:" + entry[1]);
+        let response: Response = await fetch(url);
+        let responseString: string = await response.json();
+        console.log(responseString);
         }
       
     }
