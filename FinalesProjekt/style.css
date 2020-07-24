@@ -321,6 +321,11 @@ img[alt="Getränke"]{
     padding-bottom: 20px;
 }
 
+.artikel img{
+
+    height: 20%;
+}
+
 .softdrinkt{
     display: inline-block;
 }
