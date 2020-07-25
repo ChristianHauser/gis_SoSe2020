@@ -11,6 +11,13 @@ var FinalesProjekt;
     let warenKorbArtikel = [];
     let counterstart = 0;
     const counter = document.getElementById("counter");
+    const preisStartSeite = document.getElementById("preisStartSeite");
+    let waffelCounter = 0;
+    let eisSortenCounter = 0;
+    let toppingsCounter = 0;
+    let eisDivInhalt = document.createElement("div");
+    eisDivInhalt.setAttribute("class", " EisDivBilder");
+    document.querySelector(".EisInhalt")?.appendChild(eisDivInhalt);
     //Klasse Inhalt
     let divinhalt = document.createElement("div");
     divinhalt.setAttribute("id", "inhalt");
@@ -34,9 +41,13 @@ var FinalesProjekt;
     divinhalt.appendChild(softdrinktdiv);
     //Schleife die den array mit den Artikeln komplett durchgeht. 
     function machmeineseite() {
+        let loeschButton = document.createElement("button");
+        loeschButton.innerHTML = "Neue Bestellung";
+        divinhalt.appendChild(loeschButton);
+        loeschButton.addEventListener("click", handleNeueBestellung);
         console.log("hallo");
         for (let i = 0; i < FinalesProjekt.artikelArrayy.length; i++) {
-            if (FinalesProjekt.artikelArrayy[i].art == "wasser") {
+            if (FinalesProjekt.artikelArrayy[i].art == "WaffelOderBecher") {
                 //Jeder neue Artikel wird in Klasse artikel gespeichern
                 let divElement = document.createElement("div");
                 divElement.setAttribute("class", "artikel");
@@ -67,9 +78,11 @@ var FinalesProjekt;
                 let buttonElement = document.createElement("button");
                 buttonElement.innerHTML = "Kaufen";
                 divElement.appendChild(buttonElement);
-                buttonElement.addEventListener("click", handleClickStorage);
+                buttonElement.addEventListener("click", handleWaffelHinzuegen);
+                buttonElement.addEventListener("click", handleToppinsHinzufuegen);
+                buttonElement.addEventListener("click", handleEisHinzufuegen);
             }
-            else {
+            else if (FinalesProjekt.artikelArrayy[i].art == "eis") {
                 //Wiederholung der Schritte
                 let divElement = document.createElement("div");
                 divElement.setAttribute("id", "soft");
@@ -93,49 +106,130 @@ var FinalesProjekt;
                 let buttonElement = document.createElement("button");
                 buttonElement.innerHTML = "Kaufen";
                 divElement.appendChild(buttonElement);
-                buttonElement.addEventListener("click", handleClickStorage);
+                buttonElement.addEventListener("click", handleWaffelHinzuegen);
+                buttonElement.addEventListener("click", handleToppinsHinzufuegen);
+                buttonElement.addEventListener("click", handleEisHinzufuegen);
             }
-            document.getElementById("supertolleid")?.addEventListener("click", handleSoft);
-            function handleSoft(_event) {
-                console.log("hallo");
-                document.getElementById("wasser").setAttribute("style", "display: none");
-                document.getElementById("wasserlink").setAttribute("style", "display: none");
-                document.getElementById("softdrinkt").setAttribute("style", "visibility: visible");
-                document.getElementById("softdrinktlink").setAttribute("style", "visibility: visible");
+            else {
+                let divElement = document.createElement("div");
+                divElement.setAttribute("id", "toppings");
+                softdrinktdiv.appendChild(divElement);
+                let bildElement = document.createElement("img");
+                bildElement.setAttribute("src", FinalesProjekt.artikelArrayy[i].bild);
+                divElement.appendChild(bildElement);
+                let titelElement = document.createElement("h3");
+                divElement.appendChild(titelElement);
+                titelElement.innerHTML = FinalesProjekt.artikelArrayy[i].name;
+                let beschreibungelement = document.createElement("p");
+                divElement.appendChild(beschreibungelement);
+                beschreibungelement.innerHTML = FinalesProjekt.artikelArrayy[i].beschreibung;
+                let preisElement = document.createElement("i");
+                divElement.appendChild(preisElement);
+                preisElement.innerHTML = FinalesProjekt.artikelArrayy[i].preis.toString() + "€";
+                let brelement = document.createElement("br");
+                divElement.appendChild(brelement);
+                let brelement2 = document.createElement("br");
+                divElement.appendChild(brelement2);
+                let buttonElement = document.createElement("button");
+                buttonElement.innerHTML = "Kaufen";
+                divElement.appendChild(buttonElement);
+                buttonElement.addEventListener("click", handleWaffelHinzuegen);
+                buttonElement.addEventListener("click", handleToppinsHinzufuegen);
+                buttonElement.addEventListener("click", handleEisHinzufuegen);
+                console.log(" Error");
             }
-            document.getElementById("wassertolleid")?.addEventListener("click", handleWasser);
-            function handleWasser(_event) {
-                console.log("hallo");
-                document.getElementById("softdrinkt").setAttribute("style", "display: none");
-                document.getElementById("softdrinktlink").setAttribute("style", "display: none");
-                document.getElementById("wasser").setAttribute("style", "visibility: visible");
-                document.getElementById("wasserlink").setAttribute("style", "visibility: visible");
+            function handleWaffelHinzuegen(_event) {
+                if (waffelCounter < 1 && FinalesProjekt.artikelArrayy[i].art == "WaffelOderBecher") {
+                    let eisBild = document.createElement("img");
+                    eisBild.setAttribute("id", "waffelAnzeigen");
+                    eisBild.setAttribute("src", FinalesProjekt.artikelArrayy[i].bild);
+                    document.querySelector(".menu .EisDivBilder").append(eisBild);
+                    warenKorbArtikel.push(FinalesProjekt.artikelArrayy[i]);
+                    localStorage.setItem("artikel_name" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].name);
+                    localStorage.setItem("artikel_preis" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].preis.toString());
+                    localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].beschreibung);
+                    localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].bild);
+                    localStorage.setItem("anzahlArtikel", warenKorbArtikel.length.toString());
+                    console.log("Gesamtsumme=" + summe + "€");
+                    counterstart++;
+                    counter.innerHTML = `${counterstart}`;
+                    preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
+                    waffelCounter++;
+                    summe = summe + FinalesProjekt.artikelArrayy[i].preis;
+                    preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
+                }
             }
-            document.getElementById("allesid")?.addEventListener("click", handleAlles);
-            function handleAlles(_event) {
-                document.getElementById("inhalt").setAttribute("style", "visability: visible");
-                document.getElementById("wasser").setAttribute("style", "visibility: visible");
-                document.getElementById("wasserlink").setAttribute("style", "visibility: visible");
-                document.getElementById("softdrinkt").setAttribute("style", "visibility: visible");
-                document.getElementById("softdrinktlink").setAttribute("style", "visibility: visible");
+            function handleToppinsHinzufuegen(_event) {
+                if (toppingsCounter < 4 && FinalesProjekt.artikelArrayy[i].art == "Toppings") {
+                    let eisBild = document.createElement("img");
+                    eisBild.setAttribute("id", "toppingsAnzeigen");
+                    eisBild.setAttribute("src", FinalesProjekt.artikelArrayy[i].bild);
+                    document.querySelector(".menu .EisDivBilder").append(eisBild);
+                    warenKorbArtikel.push(FinalesProjekt.artikelArrayy[i]);
+                    localStorage.setItem("artikel_name" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].name);
+                    localStorage.setItem("artikel_preis" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].preis.toString());
+                    localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].beschreibung);
+                    localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].bild);
+                    localStorage.setItem("anzahlArtikel", warenKorbArtikel.length.toString());
+                    console.log("Gesamtsumme=" + summe + "€");
+                    counterstart++;
+                    counter.innerHTML = `${counterstart}`;
+                    summe = summe + FinalesProjekt.artikelArrayy[i].preis;
+                    preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
+                    toppingsCounter++;
+                }
             }
-            function handleClickStorage(_event) {
-                warenKorbArtikel.push(FinalesProjekt.artikelArrayy[i]);
-                localStorage.setItem("artikel_name" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].name);
-                localStorage.setItem("artikel_preis" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].preis.toString());
-                localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].beschreibung);
-                localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].bild);
-                localStorage.setItem("anzahlArtikel", warenKorbArtikel.length.toString());
-                summe = summe + FinalesProjekt.artikelArrayy[i].preis;
-                summe = summe * 1000;
-                summe = summe / 1000;
-                console.log("Gesamtsumme=" + summe + "€");
-                counterstart++;
-                counter.innerHTML = "" + counterstart;
-                console.log(localStorage);
+            function handleEisHinzufuegen(_event) {
+                if (eisSortenCounter < 7 && FinalesProjekt.artikelArrayy[i].art == "eis") {
+                    let eisBild = document.createElement("img");
+                    eisBild.setAttribute("id", "eisAnzeigen");
+                    eisBild.setAttribute("src", FinalesProjekt.artikelArrayy[i].bild);
+                    document.querySelector(".menu .EisDivBilder").append(eisBild);
+                    warenKorbArtikel.push(FinalesProjekt.artikelArrayy[i]);
+                    localStorage.setItem("artikel_name" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].name);
+                    localStorage.setItem("artikel_preis" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].preis.toString());
+                    localStorage.setItem("artikel_beschreibung" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].beschreibung);
+                    localStorage.setItem("artikel_bild" + (warenKorbArtikel.length - 1), FinalesProjekt.artikelArrayy[i].bild);
+                    localStorage.setItem("anzahlArtikel", warenKorbArtikel.length.toString());
+                    console.log("Gesamtsumme=" + summe + "€");
+                    counterstart++;
+                    counter.innerHTML = `${counterstart}`;
+                    summe = summe + FinalesProjekt.artikelArrayy[i].preis;
+                    preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
+                    eisSortenCounter++;
+                }
             }
             //Gesamter Inhalt in main tag
             document.getElementById("main")?.appendChild(divinhalt);
+        }
+        function handleNeueBestellung(_event) {
+            document.getElementById("toppingsAnzeigen")?.remove();
+            document.getElementById("eisAnzeigen")?.remove();
+            document.getElementById("waffelAnzeigen")?.remove();
+            summe = 0;
+            preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
+            localStorage.clear();
+            //            ((<HTMLImageElement>_event.currentTarget).parentElement!).remove();
+        }
+        let buttonhtml = document.getElementById("button1");
+        buttonhtml.addEventListener("click", handleHTML);
+        let buttonjson = document.getElementById("button2");
+        buttonjson.addEventListener("click", handleJSON);
+        //HEROKU ANBINDUNG
+        async function handleHTML() {
+            let formData = new FormData(document.forms[0]);
+            let url = "https://gissose2020chris.herokuapp.com";
+            let query = new URLSearchParams(formData);
+            url = url + "/speichern" + "?" + query.toString();
+            await fetch(url);
+        }
+        async function handleJSON() {
+            let anzeige = document.getElementById("anzeige");
+            let url = "https://gissose2020chris.herokuapp.com";
+            url = url + "/holen";
+            let antwort = await fetch(url);
+            let antworttext = await antwort.text();
+            anzeige.innerHTML = antworttext;
         }
     }
 })(FinalesProjekt || (FinalesProjekt = {}));

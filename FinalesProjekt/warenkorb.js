@@ -1,6 +1,6 @@
 "use strict";
-var Aufgabe07fertig;
-(function (Aufgabe07fertig) {
+var FinalesProjekt;
+(function (FinalesProjekt) {
     let summe = 0;
     let psumme = document.createElement("p");
     let anzahlArtikel = parseInt(localStorage.getItem("anzahlArtikel"));
@@ -9,7 +9,7 @@ var Aufgabe07fertig;
         for (let i = 0; i <= anzahlArtikel - 1; i++) {
             let newDiv = document.createElement("div");
             document.getElementById("warenkorb").appendChild(newDiv);
-            newDiv.id = "divId" + i;
+            newDiv.id = "divId";
             //IMG IN DIV PACKEN
             let imgElement = document.createElement("img");
             imgElement.src = localStorage.getItem("artikel_bild" + i);
@@ -64,5 +64,14 @@ var Aufgabe07fertig;
             localStorage.clear();
         }
     }
-})(Aufgabe07fertig || (Aufgabe07fertig = {}));
+    let formularButton = document.getElementById("button1");
+    formularButton.addEventListener("click", handleFormular);
+    async function handleFormular() {
+        let formData = new FormData(document.forms[0]);
+        let url = "https://gissose2020chris.herokuapp.com";
+        let query = new URLSearchParams(formData);
+        url = url + "/senden" + "?" + query.toString();
+        await fetch(url);
+    }
+})(FinalesProjekt || (FinalesProjekt = {}));
 //# sourceMappingURL=warenkorb.js.map

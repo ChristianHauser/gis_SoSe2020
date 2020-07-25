@@ -1,4 +1,4 @@
-namespace Aufgabe07fertig {
+namespace FinalesProjekt {
 
     let summe: number = 0;
     let psumme: HTMLParagraphElement = document.createElement("p");
@@ -10,7 +10,7 @@ namespace Aufgabe07fertig {
 
             let newDiv: HTMLElement = document.createElement("div");
             (<HTMLElement>document.getElementById("warenkorb")).appendChild(newDiv);
-            newDiv.id = "divId" + i;
+            newDiv.id = "divId" ;
             
             //IMG IN DIV PACKEN
             let imgElement: HTMLImageElement = document.createElement("img");
@@ -77,6 +77,17 @@ namespace Aufgabe07fertig {
             }
     }
 
+    let formularButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button1");
+    formularButton.addEventListener("click" , handleFormular);
+    
+
+    async function handleFormular (): Promise <void> {
+        let formData: FormData = new FormData(document.forms[0]);
+        let url: string = "https://gissose2020chris.herokuapp.com";
+        let query: URLSearchParams = new URLSearchParams(<any>formData);
+        url = url + "/senden" + "?" + query.toString();
+        await fetch (url);
+    }
     
 }
         
