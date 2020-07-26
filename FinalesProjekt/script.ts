@@ -75,7 +75,7 @@ namespace FinalesProjekt {
                 //Jeder neue Artikel wird in Klasse artikel gespeichern
                 let divElement: HTMLElement = document.createElement("div");
                 divElement.setAttribute("class", "artikel");
-                wasserdiv.appendChild(divElement);
+                toppingsDiv.appendChild(divElement);
 
                 console.log("hallo");
 
