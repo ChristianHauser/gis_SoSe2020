@@ -3,6 +3,7 @@ namespace FinalesProjekt {
     let text: HTMLElement = <HTMLElement>document.getElementById("paragraph");
     let loeschButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button2");
     loeschButton.addEventListener("click", handleLoeschen);
+    
 
     
 

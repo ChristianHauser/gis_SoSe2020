@@ -76,6 +76,10 @@
     margin: auto;
     display: inline-block;
 }
+#paragraph {
+    position: relative;
+    top:50px;
+}
 
 #warenkorbWert p{
 
