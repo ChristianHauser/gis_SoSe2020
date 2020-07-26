@@ -15,16 +15,13 @@ var FinalesProjekt;
                 stringElement.innerHTML = ("+");
                 newDiv.appendChild(stringElement);
             }
-            //IMG IN DIV PACKEN
             let imgElement = document.createElement("img");
             imgElement.src = localStorage.getItem("artikel_bild" + i);
             newDiv.appendChild(imgElement);
-            //PREIS
             let preiss = document.createElement("p");
             preiss.innerHTML = localStorage.getItem("artikel_preis" + i);
             newDiv.setAttribute("preis", preiss.innerHTML);
             newDiv.appendChild(preiss);
-            //summe berechnen
             summe = summe + parseFloat(preiss.innerHTML);
             psumme.innerHTML = summe.toFixed(2) + "€";
             setsumme();
@@ -42,12 +39,10 @@ var FinalesProjekt;
             psumme.innerHTML = "0" + "€";
             localStorage.clear();
             setsumme();
-            //Artikel Löschen
             (_event.currentTarget.parentElement).remove();
         }
         Clear();
     }
-    //summe in Header plazieren
     function setsumme() {
         document.getElementById("warenkorbWert")?.appendChild(psumme);
     }
@@ -68,7 +63,7 @@ var FinalesProjekt;
             localStorage.clear();
         }
     }
-    let formularButton = document.getElementById("button1");
+    let formularButton = document.getElementById("buttonsenden");
     formularButton.addEventListener("click", handleFormular);
     async function handleFormular() {
         let formData = new FormData(document.forms[0]);

@@ -28,16 +28,16 @@ namespace FinalesProjekt {
     let divinhalt: HTMLElement = document.createElement("div");
     divinhalt.setAttribute("id", "inhalt");
 
-    // H2 Titel wasser mit ID
+    
     let produktTitel: HTMLElement = document.createElement("h2");
     produktTitel.setAttribute("id", "ueberschrift1");
     produktTitel.innerHTML = "Waffel oder Becher?";
     divinhalt.appendChild(produktTitel);
 
-    //Klasse wasser
-    let wasserdiv: HTMLElement = document.createElement("div");
-    wasserdiv.setAttribute("id", "wasser");
-    divinhalt.appendChild(wasserdiv);
+    
+    let neuediv: HTMLElement = document.createElement("div");
+    neuediv.setAttribute("id", "neueDiv");
+    divinhalt.appendChild(neuediv);
 
     
 

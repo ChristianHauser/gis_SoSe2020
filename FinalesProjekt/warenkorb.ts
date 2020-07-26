@@ -10,8 +10,6 @@ namespace FinalesProjekt {
         let newDiv: HTMLElement = document.createElement("div");
         (<HTMLElement>document.getElementById("warenkorb")).appendChild(newDiv);
         newDiv.id = "divId" ;
-
-        
         for (let i: number = 0; i <= anzahlArtikel - 1; i++) {
 
             if (i > 0) {
@@ -19,36 +17,21 @@ namespace FinalesProjekt {
             stringElement.innerHTML = ("+");
             newDiv.appendChild(stringElement);
             }
-             
-            
-            //IMG IN DIV PACKEN
             let imgElement: HTMLImageElement = document.createElement("img");
             imgElement.src = localStorage.getItem("artikel_bild" + i )!;
             newDiv.appendChild(imgElement);
-            
-            
-            
-           
-
-             //PREIS
+         
             let preiss: HTMLParagraphElement = document.createElement("p");
             preiss.innerHTML = localStorage.getItem("artikel_preis" + i)!;
             newDiv.setAttribute("preis", preiss.innerHTML);
             newDiv.appendChild(preiss);
 
-            //summe berechnen
             summe = summe + parseFloat(preiss.innerHTML);
             psumme.innerHTML = summe.toFixed(2) + "€";
             setsumme();   
-            
-            
-            
-            console.log(summe);
-            
+            console.log(summe);    
         }
-
-        
-        
+   
         //BUTTON
         let kaufen: HTMLButtonElement = document.createElement("button");
         kaufen.innerHTML = "Löschen";
@@ -62,14 +45,12 @@ namespace FinalesProjekt {
             psumme.innerHTML = "0" + "€";
             localStorage.clear();
             setsumme();
-
-            //Artikel Löschen
             ((<HTMLDivElement>_event.currentTarget).parentElement!).remove();
         }
         Clear();
     }
     
-    //summe in Header plazieren
+    
     function setsumme(): void {
         document.getElementById("warenkorbWert")?.appendChild(psumme);
     }
@@ -92,9 +73,8 @@ namespace FinalesProjekt {
             }
     }
 
-    let formularButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button1");
+    let formularButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("buttonsenden");
     formularButton.addEventListener("click" , handleFormular);
-    
 
     async function handleFormular (): Promise <void> {
         let formData: FormData = new FormData(document.forms[0]);
@@ -102,12 +82,5 @@ namespace FinalesProjekt {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/senden" + "?" + query.toString();
         await fetch (url);
-
-        
-    }
-
-    
-    
+    }   
 }
-        
-

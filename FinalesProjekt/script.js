@@ -21,15 +21,13 @@ var FinalesProjekt;
     //Klasse Inhalt
     let divinhalt = document.createElement("div");
     divinhalt.setAttribute("id", "inhalt");
-    // H2 Titel wasser mit ID
     let produktTitel = document.createElement("h2");
     produktTitel.setAttribute("id", "ueberschrift1");
     produktTitel.innerHTML = "Waffel oder Becher?";
     divinhalt.appendChild(produktTitel);
-    //Klasse wasser
-    let wasserdiv = document.createElement("div");
-    wasserdiv.setAttribute("id", "wasser");
-    divinhalt.appendChild(wasserdiv);
+    let neuediv = document.createElement("div");
+    neuediv.setAttribute("id", "neueDiv");
+    divinhalt.appendChild(neuediv);
     //H2 eis Titel mit ID
     let eisTitel = document.createElement("h2");
     eisTitel.setAttribute("id", "eislink");
