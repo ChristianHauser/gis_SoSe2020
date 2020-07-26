@@ -117,10 +117,6 @@ namespace FinalesProjekt {
                 buttonElement.addEventListener("click", handleToppinsHinzufuegen);
                 buttonElement.addEventListener("click", handleEisHinzufuegen);
 
-
-
-
-
             } else if (artikelArrayy[i].art == "eis") {
                 //Wiederholung der Schritte
 
