@@ -16,14 +16,10 @@ namespace FinalesProjekt {
     let eisSortenCounter: number = 0;
     let toppingsCounter: number = 0;
 
-
     let eisDivInhalt: HTMLElement = document.createElement("div");
     eisDivInhalt.setAttribute("class", " EisDivBilder");
     document.querySelector(".EisInhalt")?.appendChild(eisDivInhalt);
     
-    
-   
-
     //Klasse Inhalt
     let divinhalt: HTMLElement = document.createElement("div");
     divinhalt.setAttribute("id", "inhalt");
@@ -38,8 +34,6 @@ namespace FinalesProjekt {
     let neuediv: HTMLElement = document.createElement("div");
     neuediv.setAttribute("id", "neueDiv");
     divinhalt.appendChild(neuediv);
-
-    
 
     //H2 eis Titel mit ID
     let eisTitel: HTMLElement = document.createElement("h2");
@@ -57,7 +51,6 @@ namespace FinalesProjekt {
     toppingsTitel.innerHTML = "Toppings";
     divinhalt.appendChild(toppingsTitel);
     
-
     let toppingsDiv: HTMLElement = document.createElement("div");
     toppingsDiv.setAttribute("id", "ttoppings");
     divinhalt.appendChild(toppingsDiv);
@@ -75,7 +68,7 @@ namespace FinalesProjekt {
                 //Jeder neue Artikel wird in Klasse artikel gespeichern
                 let divElement: HTMLElement = document.createElement("div");
                 divElement.setAttribute("class", "artikel");
-                toppingsDiv.appendChild(divElement);
+                neuediv.appendChild(divElement);
 
                 console.log("hallo");
 
@@ -98,7 +91,6 @@ namespace FinalesProjekt {
                 let preiselement: HTMLElement = document.createElement("i");
                 divElement.appendChild(preiselement);
                 preiselement.innerHTML = artikelArrayy[i].preis.toString() + "€";
-
 
                 //Br tags
                 let brelement: HTMLElement = document.createElement("br");
@@ -155,14 +147,11 @@ namespace FinalesProjekt {
                 buttonElement.addEventListener("click", handleToppinsHinzufuegen);
                 buttonElement.addEventListener("click", handleEisHinzufuegen);
 
-
-
             } else if (artikelArrayy[i].art == "Toppings") {
 
                 let divElement: HTMLElement = document.createElement("div");
                 divElement.setAttribute("id", "toppings");
                 toppingsDiv.appendChild(divElement);
-
 
                 let bildElement: HTMLElement = document.createElement("img");
                 bildElement.setAttribute("src", artikelArrayy[i].bild);
@@ -195,10 +184,6 @@ namespace FinalesProjekt {
                 buttonElement.addEventListener("click", handleEisHinzufuegen);
             }
 
-
-
-            
-
             function handleWaffelHinzuegen(_event: Event): void {
                 if (waffelCounter < 1 && artikelArrayy[i].art == "WaffelOderBecher") {
                     let eisBild: HTMLImageElement = document.createElement("img");
@@ -222,7 +207,6 @@ namespace FinalesProjekt {
                     preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
 
                 }
-
 
             }
 

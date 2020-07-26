@@ -1,0 +1,6 @@
+Anleitung
+1. server.js muss als Node Server ausgeführt werden.
+2. Hauptseite ist die Index.html.
+3. Ja es muss über Githubpages geöffnet werden.
+4. Im Einkaufswagen sieht man die Bestellung für die Nutzer.
+5. Bei "Ihre Bestellungen " soll dann der Eisdealenbetreiber zugriff auf die Datenbank kriegen
