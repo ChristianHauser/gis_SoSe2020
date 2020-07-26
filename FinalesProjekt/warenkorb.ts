@@ -3,8 +3,10 @@ namespace FinalesProjekt {
     let summe: number = 0;
     let psumme: HTMLParagraphElement = document.createElement("p");
     let anzahlArtikel: number = parseInt(localStorage.getItem("anzahlArtikel")!);
+    let bestellFormularm: HTMLLIElement = <HTMLLIElement> document.getElementById("bestellId");
+    let bestellstring: string = "hallo";
+    bestellFormularm.setAttribute("value", bestellstring );
     
-
     createWarenkorbArtikel();
     function createWarenkorbArtikel(): void {
 
