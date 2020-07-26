@@ -6,12 +6,12 @@ export namespace FinalesProjekt {
       let lieferinformationen: Mongo.Collection;
       let databaseUrl: string = "mongodb+srv://benutzer:gis123@gis2020christianhauser.6cf1l.mongodb.net/Finale?retryWrites=true&w=majority";
       
-      //let databaseUrl: string = "mongodb://localhost: 27017";
+      
 
       console.log("Starting server");
-      //Port Number wird unter port gespeichert
+      
       let port: number = Number(process.env.PORT);
-      //Wenn port nicht erreichbar, wird Wert 8100 vergeben
+      
       if (!port)
         port = 8100;
 
@@ -19,7 +19,7 @@ export namespace FinalesProjekt {
       connectToDatabase(databaseUrl);
      
      
-    //Server und Listener erstellen
+    
     
       
       let server: Http.Server = Http.createServer();
@@ -54,7 +54,7 @@ export namespace FinalesProjekt {
         if (_request.url) {
           let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
           
-          if (url.pathname == "/schicken") 
+          if (url.pathname == "/senden") 
             lieferinformationen.insertOne(url.query);
           
 

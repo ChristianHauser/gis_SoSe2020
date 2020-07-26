@@ -8,15 +8,11 @@ var FinalesProjekt;
 (function (FinalesProjekt) {
     let lieferinformationen;
     let databaseUrl = "mongodb+srv://benutzer:gis123@gis2020christianhauser.6cf1l.mongodb.net/Finale?retryWrites=true&w=majority";
-    //let databaseUrl: string = "mongodb://localhost: 27017";
     console.log("Starting server");
-    //Port Number wird unter port gespeichert
     let port = Number(process.env.PORT);
-    //Wenn port nicht erreichbar, wird Wert 8100 vergeben
     if (!port)
         port = 8100;
     connectToDatabase(databaseUrl);
-    //Server und Listener erstellen
     let server = Http.createServer();
     server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
@@ -37,7 +33,7 @@ var FinalesProjekt;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         if (_request.url) {
             let url = Url.parse(_request.url, true);
-            if (url.pathname == "/schicken")
+            if (url.pathname == "/senden")
                 lieferinformationen.insertOne(url.query);
             else if (url.pathname == "/getten") {
                 _response.write(JSON.stringify(await lieferinformationen.find().toArray()));

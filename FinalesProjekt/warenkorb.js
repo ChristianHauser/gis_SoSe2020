@@ -4,9 +4,6 @@ var FinalesProjekt;
     let summe = 0;
     let psumme = document.createElement("p");
     let anzahlArtikel = parseInt(localStorage.getItem("anzahlArtikel"));
-    let bestellFormularm = document.getElementById("bestellId");
-    let bestellstring = "hallo";
-    bestellFormularm.setAttribute("value", bestellstring);
     createWarenkorbArtikel();
     function createWarenkorbArtikel() {
         let newDiv = document.createElement("div");
