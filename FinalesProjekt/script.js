@@ -56,7 +56,7 @@ var FinalesProjekt;
                 //Jeder neue Artikel wird in Klasse artikel gespeichern
                 let divElement = document.createElement("div");
                 divElement.setAttribute("class", "artikel");
-                eisDivInhalt.appendChild(divElement);
+                toppingsDiv.appendChild(divElement);
                 console.log("hallo");
                 //Bild hinzufügen
                 let bildElement = document.createElement("img");
