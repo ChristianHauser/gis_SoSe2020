@@ -291,14 +291,22 @@ namespace FinalesProjekt {
         }
 
         function handleNeueBestellung(_event: Event): void {
+            
+            for (let i: number = 0; i < 12; i++) {
             document.getElementById("toppingsAnzeigen")?.remove();
             document.getElementById("eisAnzeigen")?.remove();
             document.getElementById("waffelAnzeigen")?.remove();
+            }
+            waffelCounter = 0;
+            eisSortenCounter = 0;
+            toppingsCounter = 0;
             summe = 0;
             preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
             localStorage.clear();
 //            ((<HTMLImageElement>_event.currentTarget).parentElement!).remove();
         }
+
+        
 
         let buttonhtml: HTMLButtonElement = <HTMLButtonElement>document.getElementById("button1");
         buttonhtml.addEventListener("click", handleHTML);

@@ -210,9 +210,14 @@ var FinalesProjekt;
             document.getElementById("main")?.appendChild(divinhalt);
         }
         function handleNeueBestellung(_event) {
-            document.getElementById("toppingsAnzeigen")?.remove();
-            document.getElementById("eisAnzeigen")?.remove();
-            document.getElementById("waffelAnzeigen")?.remove();
+            for (let i = 0; i < 12; i++) {
+                document.getElementById("toppingsAnzeigen")?.remove();
+                document.getElementById("eisAnzeigen")?.remove();
+                document.getElementById("waffelAnzeigen")?.remove();
+            }
+            waffelCounter = 0;
+            eisSortenCounter = 0;
+            toppingsCounter = 0;
             summe = 0;
             preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
             localStorage.clear();

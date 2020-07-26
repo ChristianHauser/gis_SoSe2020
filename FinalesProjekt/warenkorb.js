@@ -37,9 +37,10 @@ var FinalesProjekt;
         kaufen.addEventListener("click", handleRemoveArtikel);
         function handleRemoveArtikel(_event) {
             //Den Preis verringern
-            let preisString = _event.currentTarget.parentElement.getAttribute("preis");
+            let preisString = _event.currentTarget.parentElement.getAttribute("warenkorbwert");
             summe = summe - parseFloat(preisString);
-            psumme.innerHTML = summe.toFixed(2) + "€";
+            psumme.innerHTML = "0" + "€";
+            localStorage.clear();
             setsumme();
             //Artikel Löschen
             (_event.currentTarget.parentElement).remove();

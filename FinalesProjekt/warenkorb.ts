@@ -38,7 +38,9 @@ namespace FinalesProjekt {
             //summe berechnen
             summe = summe + parseFloat(preiss.innerHTML);
             psumme.innerHTML = summe.toFixed(2) + "€";
-            setsumme();    
+            setsumme();   
+            
+            
             
             console.log(summe);
             
@@ -54,9 +56,10 @@ namespace FinalesProjekt {
         function handleRemoveArtikel(_event: Event): void {
 
             //Den Preis verringern
-            let preisString: string = (<HTMLParagraphElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("preis")!;
+            let preisString: string = (<HTMLParagraphElement>(<HTMLElement>_event.currentTarget).parentElement).getAttribute("warenkorbwert")!;
             summe = summe - parseFloat(preisString);
-            psumme.innerHTML = summe.toFixed(2) + "€";
+            psumme.innerHTML = "0" + "€";
+            localStorage.clear();
             setsumme();
 
             //Artikel Löschen
