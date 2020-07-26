@@ -7,7 +7,7 @@ var FinalesProjekt;
         let formData = new FormData(document.forms[0]);
         let url = "https://gissose2020chris.herokuapp.com";
         let query = new URLSearchParams(formData);
-        url = url + "/senden" + "?" + query.toString();
+        url = url + "/getten" + "?" + query.toString();
         await fetch(url);
     }
 })(FinalesProjekt || (FinalesProjekt = {}));
