@@ -220,7 +220,6 @@ var FinalesProjekt;
             counter.innerHTML = `${counterstart}`;
             preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
             localStorage.clear();
-            //            ((<HTMLImageElement>_event.currentTarget).parentElement!).remove();
         }
         let buttonhtml = document.getElementById("button1");
         buttonhtml.addEventListener("click", handleHTML);

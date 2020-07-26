@@ -300,7 +300,7 @@ namespace FinalesProjekt {
             
             preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
             localStorage.clear();
-//            ((<HTMLImageElement>_event.currentTarget).parentElement!).remove();
+
         }
 
         
