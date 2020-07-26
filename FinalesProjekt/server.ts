@@ -4,7 +4,7 @@ import * as Mongo from "mongodb";
 export namespace FinalesProjekt {
       
       let lieferinformationen: Mongo.Collection;
-      let databaseUrl: string = "mongodb+srv://benutzer:gis2020@gis2020christianhauser.6cf1l.mongodb.net/Finale?retryWrites=true&w=majority";
+      let databaseUrl: string = "mongodb+srv://benutzer:gis123@gis2020christianhauser.6cf1l.mongodb.net/Finale?retryWrites=true&w=majority";
       
       //let databaseUrl: string = "mongodb://localhost: 27017";
 
