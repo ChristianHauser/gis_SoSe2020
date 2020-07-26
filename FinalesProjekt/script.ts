@@ -30,7 +30,7 @@ namespace FinalesProjekt {
 
     // H2 Titel wasser mit ID
     let produktTitel: HTMLElement = document.createElement("h2");
-    produktTitel.setAttribute("id", "wasserlink");
+    produktTitel.setAttribute("id", "ueberschrift1");
     produktTitel.innerHTML = "Waffel oder Becher?";
     divinhalt.appendChild(produktTitel);
 
@@ -66,7 +66,7 @@ namespace FinalesProjekt {
     function machmeineseite(): void {
 
         let loeschButton: HTMLElement = document.createElement("button");
-        loeschButton.innerHTML = "Neue Bestellung";
+        loeschButton.innerHTML = "Bestellung verwerfen";
         divinhalt.appendChild(loeschButton);
         loeschButton.addEventListener("click", handleNeueBestellung);
         console.log("hallo");
@@ -296,11 +296,15 @@ namespace FinalesProjekt {
             document.getElementById("toppingsAnzeigen")?.remove();
             document.getElementById("eisAnzeigen")?.remove();
             document.getElementById("waffelAnzeigen")?.remove();
+            
             }
             waffelCounter = 0;
             eisSortenCounter = 0;
             toppingsCounter = 0;
             summe = 0;
+            counterstart = 0;
+            counter.innerHTML = `${counterstart}`;
+            
             preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
             localStorage.clear();
 //            ((<HTMLImageElement>_event.currentTarget).parentElement!).remove();

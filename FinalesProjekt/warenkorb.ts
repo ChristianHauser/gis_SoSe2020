@@ -3,6 +3,7 @@ namespace FinalesProjekt {
     let summe: number = 0;
     let psumme: HTMLParagraphElement = document.createElement("p");
     let anzahlArtikel: number = parseInt(localStorage.getItem("anzahlArtikel")!);
+    
 
     createWarenkorbArtikel();
     function createWarenkorbArtikel(): void {
@@ -19,14 +20,15 @@ namespace FinalesProjekt {
             stringElement.innerHTML = ("+");
             newDiv.appendChild(stringElement);
             }
-            
+             
             
             //IMG IN DIV PACKEN
             let imgElement: HTMLImageElement = document.createElement("img");
             imgElement.src = localStorage.getItem("artikel_bild" + i )!;
             newDiv.appendChild(imgElement);
             
-
+            
+            
            
 
              //PREIS
@@ -101,6 +103,8 @@ namespace FinalesProjekt {
         let query: URLSearchParams = new URLSearchParams(<any>formData);
         url = url + "/senden" + "?" + query.toString();
         await fetch (url);
+
+        
     }
 
     

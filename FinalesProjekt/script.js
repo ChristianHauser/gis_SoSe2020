@@ -23,7 +23,7 @@ var FinalesProjekt;
     divinhalt.setAttribute("id", "inhalt");
     // H2 Titel wasser mit ID
     let produktTitel = document.createElement("h2");
-    produktTitel.setAttribute("id", "wasserlink");
+    produktTitel.setAttribute("id", "ueberschrift1");
     produktTitel.innerHTML = "Waffel oder Becher?";
     divinhalt.appendChild(produktTitel);
     //Klasse wasser
@@ -49,7 +49,7 @@ var FinalesProjekt;
     //Schleife die den array mit den Artikeln komplett durchgeht. 
     function machmeineseite() {
         let loeschButton = document.createElement("button");
-        loeschButton.innerHTML = "Neue Bestellung";
+        loeschButton.innerHTML = "Bestellung verwerfen";
         divinhalt.appendChild(loeschButton);
         loeschButton.addEventListener("click", handleNeueBestellung);
         console.log("hallo");
@@ -219,6 +219,8 @@ var FinalesProjekt;
             eisSortenCounter = 0;
             toppingsCounter = 0;
             summe = 0;
+            counterstart = 0;
+            counter.innerHTML = `${counterstart}`;
             preisStartSeite.innerHTML = `${summe.toFixed(2)} €`;
             localStorage.clear();
             //            ((<HTMLImageElement>_event.currentTarget).parentElement!).remove();
