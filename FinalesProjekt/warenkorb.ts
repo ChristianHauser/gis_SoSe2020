@@ -6,21 +6,28 @@ namespace FinalesProjekt {
 
     createWarenkorbArtikel();
     function createWarenkorbArtikel(): void {
+
+        let newDiv: HTMLElement = document.createElement("div");
+        (<HTMLElement>document.getElementById("warenkorb")).appendChild(newDiv);
+        newDiv.id = "divId" ;
+
+        
         for (let i: number = 0; i <= anzahlArtikel - 1; i++) {
 
-            let newDiv: HTMLElement = document.createElement("div");
-            (<HTMLElement>document.getElementById("warenkorb")).appendChild(newDiv);
-            newDiv.id = "divId" ;
+            if (i > 0) {
+            let stringElement: HTMLParagraphElement = document.createElement("p");
+            stringElement.innerHTML = ("+");
+            newDiv.appendChild(stringElement);
+            }
+            
             
             //IMG IN DIV PACKEN
             let imgElement: HTMLImageElement = document.createElement("img");
-            imgElement.src = localStorage.getItem("artikel_bild" + i)!;
+            imgElement.src = localStorage.getItem("artikel_bild" + i )!;
             newDiv.appendChild(imgElement);
             
 
-            let name: HTMLParagraphElement = document.createElement("h1");
-            name.innerHTML = localStorage.getItem("artikel_name" + i)!;
-            newDiv.appendChild(name);
+           
 
              //PREIS
             let preiss: HTMLParagraphElement = document.createElement("p");
@@ -28,18 +35,22 @@ namespace FinalesProjekt {
             newDiv.setAttribute("preis", preiss.innerHTML);
             newDiv.appendChild(preiss);
 
-            //BUTTON
-            let kaufen: HTMLButtonElement = document.createElement("button");
-            kaufen.innerHTML = "Löschen";
-            newDiv.appendChild(kaufen);
-            kaufen.addEventListener("click", handleRemoveArtikel);
-
             //summe berechnen
             summe = summe + parseFloat(preiss.innerHTML);
             psumme.innerHTML = summe.toFixed(2) + "€";
             setsumme();    
+            
+            console.log(summe);
+            
         }
+
         
+        
+        //BUTTON
+        let kaufen: HTMLButtonElement = document.createElement("button");
+        kaufen.innerHTML = "Löschen";
+        newDiv.appendChild(kaufen);
+        kaufen.addEventListener("click", handleRemoveArtikel);
         function handleRemoveArtikel(_event: Event): void {
 
             //Den Preis verringern
@@ -88,6 +99,8 @@ namespace FinalesProjekt {
         url = url + "/senden" + "?" + query.toString();
         await fetch (url);
     }
+
+    
     
 }
         

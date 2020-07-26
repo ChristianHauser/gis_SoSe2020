@@ -21,6 +21,8 @@ namespace FinalesProjekt {
     eisDivInhalt.setAttribute("class", " EisDivBilder");
     document.querySelector(".EisInhalt")?.appendChild(eisDivInhalt);
     
+    
+   
 
     //Klasse Inhalt
     let divinhalt: HTMLElement = document.createElement("div");
@@ -29,7 +31,7 @@ namespace FinalesProjekt {
     // H2 Titel wasser mit ID
     let produktTitel: HTMLElement = document.createElement("h2");
     produktTitel.setAttribute("id", "wasserlink");
-    produktTitel.innerHTML = "Wasser";
+    produktTitel.innerHTML = "Waffel oder Becher?";
     divinhalt.appendChild(produktTitel);
 
     //Klasse wasser
@@ -37,16 +39,28 @@ namespace FinalesProjekt {
     wasserdiv.setAttribute("id", "wasser");
     divinhalt.appendChild(wasserdiv);
 
-    //H2 softdrinkt Titel mit ID
-    let softdrinktTitel: HTMLElement = document.createElement("h2");
-    softdrinktTitel.setAttribute("id", "softdrinktlink");
-    softdrinktTitel.innerHTML = "Softdrink";
-    divinhalt.appendChild(softdrinktTitel);
+    
 
-    //neue Klasse softdrinkt
-    let softdrinktdiv: HTMLElement = document.createElement("div");
-    softdrinktdiv.setAttribute("id", "softdrinkt");
-    divinhalt.appendChild(softdrinktdiv);
+    //H2 eis Titel mit ID
+    let eisTitel: HTMLElement = document.createElement("h2");
+    eisTitel.setAttribute("id", "eislink");
+    eisTitel.innerHTML = "Eissorten";
+    divinhalt.appendChild(eisTitel);
+
+    //neue Klasse eis
+    let eisdiv: HTMLElement = document.createElement("div");
+    eisdiv.setAttribute("id", "eis");
+    divinhalt.appendChild(eisdiv);
+
+    let toppingsTitel: HTMLElement = document.createElement("h2");
+    toppingsTitel.setAttribute("id", "toppingslink");
+    toppingsTitel.innerHTML = "Toppings";
+    divinhalt.appendChild(toppingsTitel);
+    
+
+    let toppingsDiv: HTMLElement = document.createElement("div");
+    toppingsDiv.setAttribute("id", "ttoppings");
+    divinhalt.appendChild(toppingsDiv);
 
     //Schleife die den array mit den Artikeln komplett durchgeht. 
     function machmeineseite(): void {
@@ -112,7 +126,7 @@ namespace FinalesProjekt {
 
                 let divElement: HTMLElement = document.createElement("div");
                 divElement.setAttribute("id", "soft");
-                softdrinktdiv.appendChild(divElement);
+                eisdiv.appendChild(divElement);
 
 
                 let bildElement: HTMLElement = document.createElement("img");
@@ -147,11 +161,11 @@ namespace FinalesProjekt {
 
 
 
-            } else {
+            } else if (artikelArrayy[i].art == "Toppings") {
 
                 let divElement: HTMLElement = document.createElement("div");
                 divElement.setAttribute("id", "toppings");
-                softdrinktdiv.appendChild(divElement);
+                toppingsDiv.appendChild(divElement);
 
 
                 let bildElement: HTMLElement = document.createElement("img");
@@ -317,6 +331,6 @@ namespace FinalesProjekt {
 
 
     }
-}
+
 
 

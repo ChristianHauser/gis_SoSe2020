@@ -24,21 +24,28 @@ var FinalesProjekt;
     // H2 Titel wasser mit ID
     let produktTitel = document.createElement("h2");
     produktTitel.setAttribute("id", "wasserlink");
-    produktTitel.innerHTML = "Wasser";
+    produktTitel.innerHTML = "Waffel oder Becher?";
     divinhalt.appendChild(produktTitel);
     //Klasse wasser
     let wasserdiv = document.createElement("div");
     wasserdiv.setAttribute("id", "wasser");
     divinhalt.appendChild(wasserdiv);
-    //H2 softdrinkt Titel mit ID
-    let softdrinktTitel = document.createElement("h2");
-    softdrinktTitel.setAttribute("id", "softdrinktlink");
-    softdrinktTitel.innerHTML = "Softdrink";
-    divinhalt.appendChild(softdrinktTitel);
-    //neue Klasse softdrinkt
-    let softdrinktdiv = document.createElement("div");
-    softdrinktdiv.setAttribute("id", "softdrinkt");
-    divinhalt.appendChild(softdrinktdiv);
+    //H2 eis Titel mit ID
+    let eisTitel = document.createElement("h2");
+    eisTitel.setAttribute("id", "eislink");
+    eisTitel.innerHTML = "Eissorten";
+    divinhalt.appendChild(eisTitel);
+    //neue Klasse eis
+    let eisdiv = document.createElement("div");
+    eisdiv.setAttribute("id", "eis");
+    divinhalt.appendChild(eisdiv);
+    let toppingsTitel = document.createElement("h2");
+    toppingsTitel.setAttribute("id", "toppingslink");
+    toppingsTitel.innerHTML = "Toppings";
+    divinhalt.appendChild(toppingsTitel);
+    let toppingsDiv = document.createElement("div");
+    toppingsDiv.setAttribute("id", "ttoppings");
+    divinhalt.appendChild(toppingsDiv);
     //Schleife die den array mit den Artikeln komplett durchgeht. 
     function machmeineseite() {
         let loeschButton = document.createElement("button");
@@ -86,7 +93,7 @@ var FinalesProjekt;
                 //Wiederholung der Schritte
                 let divElement = document.createElement("div");
                 divElement.setAttribute("id", "soft");
-                softdrinktdiv.appendChild(divElement);
+                eisdiv.appendChild(divElement);
                 let bildElement = document.createElement("img");
                 bildElement.setAttribute("src", FinalesProjekt.artikelArrayy[i].bild);
                 divElement.appendChild(bildElement);
@@ -110,10 +117,10 @@ var FinalesProjekt;
                 buttonElement.addEventListener("click", handleToppinsHinzufuegen);
                 buttonElement.addEventListener("click", handleEisHinzufuegen);
             }
-            else {
+            else if (FinalesProjekt.artikelArrayy[i].art == "Toppings") {
                 let divElement = document.createElement("div");
                 divElement.setAttribute("id", "toppings");
-                softdrinktdiv.appendChild(divElement);
+                toppingsDiv.appendChild(divElement);
                 let bildElement = document.createElement("img");
                 bildElement.setAttribute("src", FinalesProjekt.artikelArrayy[i].bild);
                 divElement.appendChild(bildElement);

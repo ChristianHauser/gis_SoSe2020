@@ -1,58 +1,59 @@
 [
     {
         "bild": "/FinalesProjekt/Bilder/EisBilder/ErdbeerEis.png",
-        "name": "ErdbeerEis",
-        "beschreibung": "Erdbeereis.",
-        "preis": 1,
+        "name": "Erdbeereis",
+        "beschreibung": "",
+        "preis": 0.99,
         "art": "eis"
+        
     },
     {
         "bild": "/FinalesProjekt/Bilder/EisBilder/SchokoEis.png",
-        "name": "Wasser Super",
-        "beschreibung": "Wow was für tolles Wasser",
-        "preis": 1.2,
+        "name": "Schokolade",
+        "beschreibung": "",
+        "preis": 1.29,
         "art": "eis"
     },
     {
         "bild": "/FinalesProjekt/Bilder/EisBilder/KirschEis.png",
-        "name": "Tolles Wasser",
-        "beschreibung": "Erfrischend Prickelnd",
-        "preis": 1.3,
+        "name": "Kirscheis",
+        "beschreibung": "",
+        "preis": 1.34,
         "art": "eis"
     },
     {
         "bild": "/FinalesProjekt/Bilder/EisBilder/VanilleEis.png",
-        "name": "Wasserrrr",
-        "beschreibung": "Neu jetzt in Medium!",
-        "preis": 1.2,
+        "name": "Vanilleeis",
+        "beschreibung": "",
+        "preis": 1.26,
         "art": "eis"
     },
     {
         "bild": "/FinalesProjekt/Bilder/WaffelOderBecher/WaffelFinal.png",
-        "name": "Geille Waffel",
-        "beschreibung": "Erfrischend Prickelnd",
-        "preis": 1.3,
+        "name": "In der Waffel",
+        "beschreibung": "",
+        "preis": 1.29,
         "art": "WaffelOderBecher"
     },
     {
         "bild": "/FinalesProjekt/Bilder/WaffelOderBecher/Eisbecher.png",
-        "name": "Tolles Wasser",
-        "beschreibung": "Erfrischend Prickelnd",
-        "preis": 1.3,
+        "name": "Im Becher",
+        "beschreibung": "",
+        "preis": 1.31,
         "art": "WaffelOderBecher"
     },
     {
         "bild": "/FinalesProjekt/Bilder/Toppings/Schlagsahne.png",
-        "name": "Tolles Wasser",
-        "beschreibung": "Erfrischend Prickelnd",
-        "preis": 1.3,
+        "name": "mit Schlagsahne",
+        "beschreibung": "",
+        "preis": 1.35,
         "art": "Toppings"
     },
     {
         "bild": "/FinalesProjekt/Bilder/Toppings/Streusel.png",
-        "name": "Tolles Wasser",
-        "beschreibung": "Erfrischend Prickelnd",
-        "preis": 1.3,
+        "name": "mit Streusel",
+        "beschreibung": "",
+        "preis": 1.39,
         "art": "Toppings"
     }
 ]

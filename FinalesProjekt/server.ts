@@ -54,11 +54,11 @@ export namespace FinalesProjekt {
         if (_request.url) {
           let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
           
-          if (url.pathname == "/senden") 
+          if (url.pathname == "/schicken") 
             lieferinformationen.insertOne(url.query);
           
 
-             else if (url.pathname == "/holen") {
+             else if (url.pathname == "/getten") {
           
              
               _response.write(JSON.stringify(await lieferinformationen.find().toArray()));
