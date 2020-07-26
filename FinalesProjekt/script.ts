@@ -197,9 +197,6 @@ namespace FinalesProjekt {
                 buttonElement.addEventListener("click", handleWaffelHinzuegen);
                 buttonElement.addEventListener("click", handleToppinsHinzufuegen);
                 buttonElement.addEventListener("click", handleEisHinzufuegen);
-
-
-                console.log(" Error");
             }
 
 
@@ -339,10 +336,7 @@ namespace FinalesProjekt {
        
         }
     }
-
-
-
-    }
+}
 
 
 

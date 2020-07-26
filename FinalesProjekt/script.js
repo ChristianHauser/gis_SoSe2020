@@ -141,7 +141,6 @@ var FinalesProjekt;
                 buttonElement.addEventListener("click", handleWaffelHinzuegen);
                 buttonElement.addEventListener("click", handleToppinsHinzufuegen);
                 buttonElement.addEventListener("click", handleEisHinzufuegen);
-                console.log(" Error");
             }
             function handleWaffelHinzuegen(_event) {
                 if (waffelCounter < 1 && FinalesProjekt.artikelArrayy[i].art == "WaffelOderBecher") {
