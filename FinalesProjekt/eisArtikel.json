@@ -1,6 +1,6 @@
 [
     {
-        "bild": "/FinalesProjekt/Bilder/EisBilder/ErdbeerEis.png",
+        "bild": "/gis_SoSe2020/FinalesProjekt/Bilder/EisBilder/ErdbeerEis.png",
         "name": "Erdbeereis",
         "beschreibung": "",
         "preis": 0.99,
@@ -8,49 +8,49 @@
         
     },
     {
-        "bild": "/FinalesProjekt/Bilder/EisBilder/SchokoEis.png",
+        "bild": "/gis_SoSe2020/FinalesProjekt/Bilder/EisBilder/SchokoEis.png",
         "name": "Schokolade",
         "beschreibung": "",
         "preis": 1.29,
         "art": "eis"
     },
     {
-        "bild": "/FinalesProjekt/Bilder/EisBilder/KirschEis.png",
+        "bild": "/gis_SoSe2020/FinalesProjekt/Bilder/EisBilder/KirschEis.png",
         "name": "Kirscheis",
         "beschreibung": "",
         "preis": 1.34,
         "art": "eis"
     },
     {
-        "bild": "/FinalesProjekt/Bilder/EisBilder/VanilleEis.png",
+        "bild": "/gis_SoSe2020/FinalesProjekt/Bilder/EisBilder/VanilleEis.png",
         "name": "Vanilleeis",
         "beschreibung": "",
         "preis": 1.26,
         "art": "eis"
     },
     {
-        "bild": "/FinalesProjekt/Bilder/WaffelOderBecher/WaffelFinal.png",
+        "bild": "/gis_SoSe2020/FinalesProjekt/Bilder/WaffelOderBecher/WaffelFinal.png",
         "name": "In der Waffel",
         "beschreibung": "",
         "preis": 1.29,
         "art": "WaffelOderBecher"
     },
     {
-        "bild": "/FinalesProjekt/Bilder/WaffelOderBecher/Eisbecher.png",
+        "bild": "/gis_SoSe2020/FinalesProjekt/Bilder/WaffelOderBecher/Eisbecher.png",
         "name": "Im Becher",
         "beschreibung": "",
         "preis": 1.31,
         "art": "WaffelOderBecher"
     },
     {
-        "bild": "/FinalesProjekt/Bilder/Toppings/Schlagsahne.png",
+        "bild": "/gis_SoSe2020/FinalesProjekt/Bilder/Toppings/Schlagsahne.png",
         "name": "mit Schlagsahne",
         "beschreibung": "",
         "preis": 1.35,
         "art": "Toppings"
     },
     {
-        "bild": "/FinalesProjekt/Bilder/Toppings/Streusel.png",
+        "bild": "/gis_SoSe2020/FinalesProjekt/Bilder/Toppings/Streusel.png",
         "name": "mit Streusel",
         "beschreibung": "",
         "preis": 1.39,
